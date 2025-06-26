@@ -1,0 +1,44 @@
+22:26:29.292 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+22:26:29.296 [restartedMain] INFO  c.r.RuoYiApplication - [logStarting,55] - Starting RuoYiApplication using Java 1.8.0_401 on caowangshuaideMacBook-Pro-2.local with PID 29533 (/Users/caowangshuai/Documents/tools/zj/RuoYi-Vue/ruoyi-admin/target/classes started by caowangshuai in /Users/caowangshuai/Documents/tools/zj/RuoYi-Vue)
+22:26:29.296 [restartedMain] INFO  c.r.RuoYiApplication - [logStartupProfileInfo,686] - The following 1 profile is active: "druid"
+22:26:30.688 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,168] - Initializing ProtocolHandler ["http-nio-8080"]
+22:26:30.689 [restartedMain] INFO  o.a.c.c.StandardService - [log,168] - Starting service [Tomcat]
+22:26:30.689 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,168] - Starting Servlet engine: [Apache Tomcat/9.0.105]
+22:26:30.726 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,168] - Initializing Spring embedded WebApplicationContext
+22:26:31.337 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+22:26:32.000 [restartedMain] INFO  c.a.d.p.DruidDataSource - [close,2204] - {dataSource-1} closing ...
+22:26:32.003 [restartedMain] INFO  c.a.d.p.DruidDataSource - [close,2277] - {dataSource-1} closed
+22:26:32.117 [restartedMain] INFO  o.a.c.c.StandardService - [log,168] - Stopping service [Tomcat]
+22:27:07.235 [restartedMain] INFO  c.r.RuoYiApplication - [logStarting,55] - Starting RuoYiApplication using Java 1.8.0_401 on caowangshuaideMacBook-Pro-2.local with PID 29574 (/Users/caowangshuai/Documents/tools/zj/RuoYi-Vue/ruoyi-admin/target/classes started by caowangshuai in /Users/caowangshuai/Documents/tools/zj/RuoYi-Vue)
+22:27:07.236 [restartedMain] INFO  c.r.RuoYiApplication - [logStartupProfileInfo,686] - The following 1 profile is active: "druid"
+22:27:07.236 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+22:27:08.140 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,168] - Initializing ProtocolHandler ["http-nio-8080"]
+22:27:08.141 [restartedMain] INFO  o.a.c.c.StandardService - [log,168] - Starting service [Tomcat]
+22:27:08.141 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,168] - Starting Servlet engine: [Apache Tomcat/9.0.105]
+22:27:08.166 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,168] - Initializing Spring embedded WebApplicationContext
+22:27:08.837 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+22:27:09.739 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+22:27:09.744 [restartedMain] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+22:27:09.745 [restartedMain] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+22:27:09.745 [restartedMain] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
+22:27:09.745 [restartedMain] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+22:27:09.745 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+22:27:09.745 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+22:27:09.746 [restartedMain] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@75b3053d
+22:27:10.459 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,168] - Starting ProtocolHandler ["http-nio-8080"]
+22:27:10.540 [restartedMain] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+22:27:10.544 [restartedMain] INFO  c.r.RuoYiApplication - [logStarted,61] - Started RuoYiApplication in 3.464 seconds (JVM running for 3.909)
+22:27:17.700 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,168] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+22:27:22.547 [schedule-pool-1] INFO  sys-user - [run,55] - [127.0.0.1]内网IP[admin][Success][登录成功]
+22:29:39.357 [schedule-pool-1] INFO  sys-user - [run,55] - [192.168.2.163]内网IP[admin][Error][验证码错误]
+22:29:44.041 [schedule-pool-2] INFO  sys-user - [run,55] - [192.168.2.163]内网IP[admin][Error][验证码错误]
+22:30:35.923 [schedule-pool-1] INFO  sys-user - [run,55] - [192.168.2.163]内网IP[admin][Success][登录成功]
+22:31:08.891 [schedule-pool-3] INFO  sys-user - [run,55] - [192.168.2.82]内网IP[admin][Error][验证码错误]
+22:31:16.940 [schedule-pool-2] INFO  sys-user - [run,55] - [192.168.2.82]内网IP[admin][Success][登录成功]

@@ -1,0 +1,78 @@
+23:24:41.438 [restartedMain] INFO  c.r.RuoYiApplication - [logStarting,55] - Starting RuoYiApplication using Java 1.8.0_401 on caowangshuaideMacBook-Pro-2.local with PID 8502 (/Users/caowangshuai/Documents/tools/zj/RuoYi-Vue/ruoyi-admin/target/classes started by caowangshuai in /Users/caowangshuai/Documents/tools/zj/RuoYi-Vue)
+23:24:41.439 [restartedMain] INFO  c.r.RuoYiApplication - [logStartupProfileInfo,686] - The following 1 profile is active: "druid"
+23:24:41.439 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+23:24:42.325 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,168] - Initializing ProtocolHandler ["http-nio-8080"]
+23:24:42.325 [restartedMain] INFO  o.a.c.c.StandardService - [log,168] - Starting service [Tomcat]
+23:24:42.326 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,168] - Starting Servlet engine: [Apache Tomcat/9.0.105]
+23:24:42.350 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,168] - Initializing Spring embedded WebApplicationContext
+23:24:42.850 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+23:24:43.224 [restartedMain] INFO  c.a.d.p.DruidDataSource - [close,2204] - {dataSource-1} closing ...
+23:24:43.227 [restartedMain] INFO  c.a.d.p.DruidDataSource - [close,2277] - {dataSource-1} closed
+23:24:43.234 [restartedMain] INFO  o.a.c.c.StandardService - [log,168] - Stopping service [Tomcat]
+23:25:54.555 [restartedMain] INFO  c.r.RuoYiApplication - [logStarting,55] - Starting RuoYiApplication using Java 1.8.0_401 on caowangshuaideMacBook-Pro-2.local with PID 8527 (/Users/caowangshuai/Documents/tools/zj/RuoYi-Vue/ruoyi-admin/target/classes started by caowangshuai in /Users/caowangshuai/Documents/tools/zj/RuoYi-Vue)
+23:25:54.557 [restartedMain] INFO  c.r.RuoYiApplication - [logStartupProfileInfo,686] - The following 1 profile is active: "druid"
+23:25:54.560 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+23:25:55.395 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,168] - Initializing ProtocolHandler ["http-nio-8080"]
+23:25:55.396 [restartedMain] INFO  o.a.c.c.StandardService - [log,168] - Starting service [Tomcat]
+23:25:55.396 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,168] - Starting Servlet engine: [Apache Tomcat/9.0.105]
+23:25:55.425 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,168] - Initializing Spring embedded WebApplicationContext
+23:25:55.934 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+23:25:56.467 [restartedMain] INFO  c.a.d.p.DruidDataSource - [close,2204] - {dataSource-1} closing ...
+23:25:56.470 [restartedMain] INFO  c.a.d.p.DruidDataSource - [close,2277] - {dataSource-1} closed
+23:25:56.582 [restartedMain] INFO  o.a.c.c.StandardService - [log,168] - Stopping service [Tomcat]
+23:26:26.468 [restartedMain] INFO  c.r.RuoYiApplication - [logStarting,55] - Starting RuoYiApplication using Java 1.8.0_401 on caowangshuaideMacBook-Pro-2.local with PID 8539 (/Users/caowangshuai/Documents/tools/zj/RuoYi-Vue/ruoyi-admin/target/classes started by caowangshuai in /Users/caowangshuai/Documents/tools/zj/RuoYi-Vue)
+23:26:26.469 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+23:26:26.469 [restartedMain] INFO  c.r.RuoYiApplication - [logStartupProfileInfo,686] - The following 1 profile is active: "druid"
+23:26:27.332 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,168] - Initializing ProtocolHandler ["http-nio-8080"]
+23:26:27.332 [restartedMain] INFO  o.a.c.c.StandardService - [log,168] - Starting service [Tomcat]
+23:26:27.332 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,168] - Starting Servlet engine: [Apache Tomcat/9.0.105]
+23:26:27.357 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,168] - Initializing Spring embedded WebApplicationContext
+23:26:27.866 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+23:26:28.360 [restartedMain] INFO  c.a.d.p.DruidDataSource - [close,2204] - {dataSource-1} closing ...
+23:26:28.363 [restartedMain] INFO  c.a.d.p.DruidDataSource - [close,2277] - {dataSource-1} closed
+23:26:28.474 [restartedMain] INFO  o.a.c.c.StandardService - [log,168] - Stopping service [Tomcat]
+23:26:46.832 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+23:26:46.832 [restartedMain] INFO  c.r.RuoYiApplication - [logStarting,55] - Starting RuoYiApplication using Java 1.8.0_401 on caowangshuaideMacBook-Pro-2.local with PID 8581 (/Users/caowangshuai/Documents/tools/zj/RuoYi-Vue/ruoyi-admin/target/classes started by caowangshuai in /Users/caowangshuai/Documents/tools/zj/RuoYi-Vue)
+23:26:46.833 [restartedMain] INFO  c.r.RuoYiApplication - [logStartupProfileInfo,686] - The following 1 profile is active: "druid"
+23:26:47.710 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,168] - Initializing ProtocolHandler ["http-nio-8080"]
+23:26:47.711 [restartedMain] INFO  o.a.c.c.StandardService - [log,168] - Starting service [Tomcat]
+23:26:47.711 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,168] - Starting Servlet engine: [Apache Tomcat/9.0.105]
+23:26:47.736 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,168] - Initializing Spring embedded WebApplicationContext
+23:26:48.251 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+23:26:48.798 [restartedMain] INFO  c.a.d.p.DruidDataSource - [close,2204] - {dataSource-1} closing ...
+23:26:48.801 [restartedMain] INFO  c.a.d.p.DruidDataSource - [close,2277] - {dataSource-1} closed
+23:26:48.913 [restartedMain] INFO  o.a.c.c.StandardService - [log,168] - Stopping service [Tomcat]
+23:28:05.349 [restartedMain] INFO  c.r.RuoYiApplication - [logStarting,55] - Starting RuoYiApplication using Java 1.8.0_401 on caowangshuaideMacBook-Pro-2.local with PID 8616 (/Users/caowangshuai/Documents/tools/zj/RuoYi-Vue/ruoyi-admin/target/classes started by caowangshuai in /Users/caowangshuai/Documents/tools/zj/RuoYi-Vue)
+23:28:05.350 [restartedMain] INFO  c.r.RuoYiApplication - [logStartupProfileInfo,686] - The following 1 profile is active: "druid"
+23:28:05.353 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+23:28:06.196 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,168] - Initializing ProtocolHandler ["http-nio-8080"]
+23:28:06.197 [restartedMain] INFO  o.a.c.c.StandardService - [log,168] - Starting service [Tomcat]
+23:28:06.197 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,168] - Starting Servlet engine: [Apache Tomcat/9.0.105]
+23:28:06.223 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,168] - Initializing Spring embedded WebApplicationContext
+23:28:06.713 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+23:28:08.096 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+23:28:08.099 [restartedMain] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+23:28:08.099 [restartedMain] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+23:28:08.099 [restartedMain] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
+23:28:08.100 [restartedMain] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+23:28:08.100 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+23:28:08.100 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+23:28:08.100 [restartedMain] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@4559e611
+23:28:08.793 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,168] - Starting ProtocolHandler ["http-nio-8080"]
+23:28:08.877 [restartedMain] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+23:28:08.882 [restartedMain] INFO  c.r.RuoYiApplication - [logStarted,61] - Started RuoYiApplication in 3.672 seconds (JVM running for 4.004)
+23:28:36.370 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,168] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+23:28:43.690 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+23:28:43.702 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,666] - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+23:28:43.702 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+23:28:43.702 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,740] - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+23:28:43.702 [SpringApplicationShutdownHook] INFO  sys-user - [shutdownAsyncManager,31] - ====关闭后台任务任务线程池====
+23:28:43.704 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2204] - {dataSource-1} closing ...
+23:28:43.709 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2277] - {dataSource-1} closed

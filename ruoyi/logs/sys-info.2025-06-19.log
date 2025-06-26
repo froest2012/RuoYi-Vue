@@ -1,0 +1,833 @@
+00:40:45.155 [restartedMain] INFO  c.r.RuoYiApplication - [logStarting,55] - Starting RuoYiApplication using Java 1.8.0_401 on caowangshuaideMacBook-Pro-2.local with PID 89544 (/Users/caowangshuai/Documents/tools/zj/RuoYi-Vue/ruoyi-admin/target/classes started by caowangshuai in /Users/caowangshuai/Documents/tools/zj/RuoYi-Vue)
+00:40:45.156 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+00:40:45.157 [restartedMain] INFO  c.r.RuoYiApplication - [logStartupProfileInfo,686] - The following 1 profile is active: "druid"
+00:40:46.231 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,168] - Initializing ProtocolHandler ["http-nio-8080"]
+00:40:46.232 [restartedMain] INFO  o.a.c.c.StandardService - [log,168] - Starting service [Tomcat]
+00:40:46.232 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,168] - Starting Servlet engine: [Apache Tomcat/9.0.105]
+00:40:46.263 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,168] - Initializing Spring embedded WebApplicationContext
+00:40:46.837 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+00:40:47.674 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+00:40:47.678 [restartedMain] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+00:40:47.678 [restartedMain] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+00:40:47.678 [restartedMain] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
+00:40:47.679 [restartedMain] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+00:40:47.679 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+00:40:47.679 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+00:40:47.679 [restartedMain] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@7a05716d
+00:40:48.504 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,168] - Starting ProtocolHandler ["http-nio-8080"]
+00:40:48.602 [restartedMain] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+00:40:48.607 [restartedMain] INFO  c.r.RuoYiApplication - [logStarted,61] - Started RuoYiApplication in 3.618 seconds (JVM running for 4.025)
+00:41:25.339 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,168] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+00:41:30.488 [schedule-pool-1] INFO  sys-user - [run,55] - [127.0.0.1]内网IP[admin][Error][验证码错误]
+00:41:38.775 [schedule-pool-1] INFO  sys-user - [run,55] - [127.0.0.1]内网IP[admin][Success][登录成功]
+00:41:52.636 [http-nio-8080-exec-15] INFO  c.r.c.u.d.DifyUtil - [get_dify_value,128] - start invoke dify chat completion url:https://dify-test.91jzx.cn/v1/chat-messages; apiKey:app-aPHBPG5VzJJlKZ2OTp2VEhPT; requestBody:{
+    "inputs": {
+        "query": "【PRD-已评审】【0423】开机流程及桌面改造 背景  目前观察用户日志发现几个现象：   有一部分家长给到我们产品的体验期时间很短，往往体验不到10分钟就不再使用，同样，也没有使用、了解主产品的核心价值；   另外还有很大一部分新用户在开机之后会先去使用第三方应用，导致我们最核心的、能够体现核心价值的产品没有在第一时间传递给家长；   最后家长和学生看到的是同一套流程，在开机后的第一时间没有一种“哦这是一个专属家教老师在给我/我家孩子做学习辅导、学习规划”的感觉，“寒雪AI一对一超拟人辅导老师”的形象没有很好的建立起来；   因此在接下来的需求中，会重点解决下面这些问题：   加强新用户开机后，对核心产品使用的引导；   区分家长和学生的开机流程，对不同角色给到不同的价值点，塑造寒雪老师的专业感；  版本记录 需求范围 整体流程串联   流程图中黄色节点为本次新增内容；   另，整体开机流程中的页面视觉风格会统一调整，与新版桌面风格一致；  开机及账号初始化流程调整 新增分角色寒雪沟通流程 2.1 流程概述  剧本链接：【0423】新开机流程剧本   不同年级、不同子账号状态（初次建子账号or后续建子账号）、不同开机流程角色身份（家长or学生）的流程走向梳理    TTS调用：剧本中存在占位符的台词需要调用线上通用版-240228模型生成  2.3 B02家长沟通流程（寒雪家访）  2.3.1 「信息收集」环节（不用看） 2.3.2 「信息整合」环节（不用看）  在「家长沟通」环节中，将用户和AI在三个阶段（基础信息、学习表现、家庭互动）的对话日志按照角色打上身份标签后，拼接到一起，形成完整的信息收集对话日志   数据示例：  对话结果示例 parent:我们开始吧 teacher:西西家长，接下来我会问您一些关于孩子基础学情的问题。首先，您希望重点提升西西哪门学科呢，是语文、数学还是英语？ parent:语文吧 teacher:了解。那西西在学校语文考试成绩如何，大致在哪个成绩区间呀，另外他们考试是100分制、120分制还是150分制呢？ parent:他们现在是100分制，然后80多分吧 teacher:明白。那一般情况下，西西完成学校布置的作业大概需要多长时间呢？ parent:好像要蛮久的，做完作业平时都得10点多了 teacher:那时间确实不短。那他完成学校作业后，一般还能有多少时间做课外学习呀？ parent:周中基本没有了，周末会花点时间 teacher:好的，我已经了解了西西的基础学情。感谢您的配合。[nextRoundEnd] parent:我们继续吧 teacher:西西家长，接下来我会问一些关于孩子学习表现特征的问题。学校老师反馈的西西在校表现如何，上课的时候他愿意主动举手回答问题吗？ ......  数据拼接完成后，将内容提供给“学生标签提取提示词”，完成对学生画像的标签提取工作   【dify-in环境提示词】：https://dify-in.91jzx.cn/app/8b236d60-cfa6-4e8e-b409-f0f356ddb44a/configuration   数据示例：  标签提取结果示例 [{aspect: 提升学科，label: 语文，reason: 家长明确表示希望重点提升孩子的语文学科成绩}, {aspect: 成绩分档，label: B，reason: 孩子的语文成绩在100分制下为80多分，根据评分标准属于B档}, {aspect: 可安排学习时间，label: 周末，reason: 孩家长期中提到孩子周中基本没有时间做课外学习，但周末会花点时间进行额外的学习活动}, {aspect: 课堂互动偏好，label: 被动应答型，reason: 家长反馈显示孩子在数学课上不太发言，在英语课上则比较积极，表明他更倾向于被动地参与课堂互动而不是主动发起}, {aspect: 监督依赖偏好，label: 自主推进型，reason: 根据家长的说法，孩子在学习过程中不需要频繁的监督或提醒，显示出较强的自我管理能力}, {aspect: 难题求助偏好，label: 自主攻坚型，reason: 当遇到不会做的题目时，孩子习惯于自己研究解决问题的方法而不是立即寻求帮助，这符合自主攻坚型的特点}, {aspect: 分享偏好，label: 引导互动型,事件报告型，reason: 孩子不主动与父母分享学校发生的事情，且当被问及学校情况时主要讲述具体发生的事件而非个人感受}, {aspect: 规则偏好，label: 规则挑战型，reason: 对于家庭规则，如作息时间和娱乐活动限制等，孩子表现出不在意的态度，暗示了他对既定规则持有一种挑战性的立场}] 2.3.3 「学习规划说明」环节（不用看） 基本说明 分为“画面展示”和“寒雪解读”两个部分  画面展示：如下表，分为5个模块，每个模块展示不同的内容；每个模块出现顺序按照下表中的编号顺序；   寒雪解读：与画面展示的模块对应，但语音内容是另外产出；如画面展示的是第一块“学生情况总结”，那么寒雪解读的内容也是这一部分的内容；这个部分不需要家长语音参与；  各部分细节需求说明 2.3.4 完整流程汇总（看这个）  2.4 B03学生沟通流程 5月版本不做！功能介绍完直接进桌面 和学生的沟通环节形式主要模仿各种性格测试。学生通过语音回答各个问题后，基于学生给到的信息，生成各自的性格类型，作为学生的个人信息保存、并在个人中心中展示；同时寒雪会基于学生给到的信息和生成的性格类型，给出简单的解读  新版桌面 3.1 新版桌面结构说明  新版桌面分为三层，具体见下方表格  3.2 各组件模块说明 3.2.1 功能模块 3.2.1.1 学习计划  进入桌面后，根据在家长沟通环节所收集到的学生信息，匹配规则展示对应的学习计划内容；   【0610补充】——家访结果数据未同步至桌面异常case处理 3.2.1.2 新手任务 ==以下是P1需求==  新增「新手任务」模块，展示核心自研产品的新手引导内容；   核心自研产品的新手引导形态为互动剧本模式，用户跟随设定的剧本，完成核心功能、交互的体验；   各学段新手引导产品对应关系：   保留现有介绍/引导视频的应用：   家长端小程序   精准学系列？   同步语文辅导   同步英语辅导   金牌视频   异常case处理：   若用户在进行某个产品的新手任务时点击退出按钮，需要二次弹窗提醒确认；   若用户杀进程或退出后，需要记录退出的节点，下次进入后走异常恢复；   已经完成的新手任务允许再次进入；   同一个主账号的不同子账号下，相同产品的新手引导任务进度互通（可能改成不互通）；任务完成进度百分比每个子账号单独计算；   如，第一个子账号是2年级，且完成了所有新手引导任务，进度为3/3=100%；然后新建了第二个子账号，5年级，此时新手引导任务为3/5=60%；  3.2.2 灵动岛（0520更新：新版桌面无灵动岛需求，使用静态文案，后续迭代再补灵动岛需求）  灵动岛与 iPhone灵动岛类似，目前的设定是显示当前用户的信息和学习状态，仅在桌面出现，不扩展到其他具体应用；   后续「灵动岛」会发展成寒雪老师心理活动的外化出口；一方面扩展文案的表达内容，在不同时间、用户不同行为表现下，文案处展示不同内容，另一方面扩展除桌面之外的出现场景；   「灵动岛」包含主要元素    用户头像   可点击，进入个人中心   核心展示区域   具体交互需求见下方   圆环进度（P1，本期不做）   可点击，进入新手任务页   灵动岛中不同文案指令内容优先级排序（0509补充）  3.3 子账号声纹录入  背景说明：   目前在数学一对一等应用的上课场景中，观察到经常会出现学生和家长同时说话，或者家长代替学生回答的情况，导致大模型判断结果混乱；   此外桌面改版后会增加寒雪唤醒功能，未来可能需要与子账号的声音进行关联做出区分；   基于上面两种case，需要增加对学生的主体音色录入环节。   需求说明：   针对学生子账号增加「声纹录入」环节，学生需按照指示完成声音的录入；  3.4 个人中心调整（待调整0508评审） 【PRD】【桌面】个人中心+系统更新视觉优化@陈鹏帆(希望寒雪老师直播间不讲错)（0514更新：待基于最新版本的个人中心重新修改原始文档中的示意图）  增加 家长端小程序 二维码   数学一对一体验营剧本调整（0515迭代已上线）  原本数学一对一的体验营中包含「寒雪破冰」流程，承担寒雪向用户自我介绍的流程；在本次开机流程调整后，其他产品中的寒雪自我介绍流程可以删除，避免重复；  【PRD】0515 数学一对一优化 家长端小程序调整  创建学生账号时，隐藏「平时数学成绩」栏。   完成子账号的寒雪家访流程后，往家长端小程序发送通知，并在学生首页展示家访结果报告；  数据统计需求 6.1 【补充】用户行为路径分析后台子账号展示信息  增加首页表格中展示字段和筛选条件   增加子账号展示的详细信息   展示寒雪家访的详细信息  6.2 【新增】用户行为路径分析后台数据统计模块  关联文档 【进行中】区分家长和学生的开机流程 设计稿链接：https://www.figma.com/design/wTnpqK3CSHRYK6e7KLvZrV/%E3%80%90250214%E3%80%91%E6%A1%8C%E9%9D%A2?node-id=12444-9895&t=Biv7dP0sAzCS22aw-1  "},    "query": "开始吧",
+    "response_mode": "streaming",
+    "conversation_id": "",
+    "user": "abc-123"
+};
+00:42:55.917 [http-nio-8080-exec-15] INFO  c.r.c.u.d.DifyUtil - [get_dify_value,130] - end invoke dify chat completion url:https://dify-test.91jzx.cn/v1/chat-messages; apiKey:app-aPHBPG5VzJJlKZ2OTp2VEhPT; requestBody:{
+    "inputs": {
+        "query": "【PRD-已评审】【0423】开机流程及桌面改造 背景  目前观察用户日志发现几个现象：   有一部分家长给到我们产品的体验期时间很短，往往体验不到10分钟就不再使用，同样，也没有使用、了解主产品的核心价值；   另外还有很大一部分新用户在开机之后会先去使用第三方应用，导致我们最核心的、能够体现核心价值的产品没有在第一时间传递给家长；   最后家长和学生看到的是同一套流程，在开机后的第一时间没有一种“哦这是一个专属家教老师在给我/我家孩子做学习辅导、学习规划”的感觉，“寒雪AI一对一超拟人辅导老师”的形象没有很好的建立起来；   因此在接下来的需求中，会重点解决下面这些问题：   加强新用户开机后，对核心产品使用的引导；   区分家长和学生的开机流程，对不同角色给到不同的价值点，塑造寒雪老师的专业感；  版本记录 需求范围 整体流程串联   流程图中黄色节点为本次新增内容；   另，整体开机流程中的页面视觉风格会统一调整，与新版桌面风格一致；  开机及账号初始化流程调整 新增分角色寒雪沟通流程 2.1 流程概述  剧本链接：【0423】新开机流程剧本   不同年级、不同子账号状态（初次建子账号or后续建子账号）、不同开机流程角色身份（家长or学生）的流程走向梳理    TTS调用：剧本中存在占位符的台词需要调用线上通用版-240228模型生成  2.3 B02家长沟通流程（寒雪家访）  2.3.1 「信息收集」环节（不用看） 2.3.2 「信息整合」环节（不用看）  在「家长沟通」环节中，将用户和AI在三个阶段（基础信息、学习表现、家庭互动）的对话日志按照角色打上身份标签后，拼接到一起，形成完整的信息收集对话日志   数据示例：  对话结果示例 parent:我们开始吧 teacher:西西家长，接下来我会问您一些关于孩子基础学情的问题。首先，您希望重点提升西西哪门学科呢，是语文、数学还是英语？ parent:语文吧 teacher:了解。那西西在学校语文考试成绩如何，大致在哪个成绩区间呀，另外他们考试是100分制、120分制还是150分制呢？ parent:他们现在是100分制，然后80多分吧 teacher:明白。那一般情况下，西西完成学校布置的作业大概需要多长时间呢？ parent:好像要蛮久的，做完作业平时都得10点多了 teacher:那时间确实不短。那他完成学校作业后，一般还能有多少时间做课外学习呀？ parent:周中基本没有了，周末会花点时间 teacher:好的，我已经了解了西西的基础学情。感谢您的配合。[nextRoundEnd] parent:我们继续吧 teacher:西西家长，接下来我会问一些关于孩子学习表现特征的问题。学校老师反馈的西西在校表现如何，上课的时候他愿意主动举手回答问题吗？ ......  数据拼接完成后，将内容提供给“学生标签提取提示词”，完成对学生画像的标签提取工作   【dify-in环境提示词】：https://dify-in.91jzx.cn/app/8b236d60-cfa6-4e8e-b409-f0f356ddb44a/configuration   数据示例：  标签提取结果示例 [{aspect: 提升学科，label: 语文，reason: 家长明确表示希望重点提升孩子的语文学科成绩}, {aspect: 成绩分档，label: B，reason: 孩子的语文成绩在100分制下为80多分，根据评分标准属于B档}, {aspect: 可安排学习时间，label: 周末，reason: 孩家长期中提到孩子周中基本没有时间做课外学习，但周末会花点时间进行额外的学习活动}, {aspect: 课堂互动偏好，label: 被动应答型，reason: 家长反馈显示孩子在数学课上不太发言，在英语课上则比较积极，表明他更倾向于被动地参与课堂互动而不是主动发起}, {aspect: 监督依赖偏好，label: 自主推进型，reason: 根据家长的说法，孩子在学习过程中不需要频繁的监督或提醒，显示出较强的自我管理能力}, {aspect: 难题求助偏好，label: 自主攻坚型，reason: 当遇到不会做的题目时，孩子习惯于自己研究解决问题的方法而不是立即寻求帮助，这符合自主攻坚型的特点}, {aspect: 分享偏好，label: 引导互动型,事件报告型，reason: 孩子不主动与父母分享学校发生的事情，且当被问及学校情况时主要讲述具体发生的事件而非个人感受}, {aspect: 规则偏好，label: 规则挑战型，reason: 对于家庭规则，如作息时间和娱乐活动限制等，孩子表现出不在意的态度，暗示了他对既定规则持有一种挑战性的立场}] 2.3.3 「学习规划说明」环节（不用看） 基本说明 分为“画面展示”和“寒雪解读”两个部分  画面展示：如下表，分为5个模块，每个模块展示不同的内容；每个模块出现顺序按照下表中的编号顺序；   寒雪解读：与画面展示的模块对应，但语音内容是另外产出；如画面展示的是第一块“学生情况总结”，那么寒雪解读的内容也是这一部分的内容；这个部分不需要家长语音参与；  各部分细节需求说明 2.3.4 完整流程汇总（看这个）  2.4 B03学生沟通流程 5月版本不做！功能介绍完直接进桌面 和学生的沟通环节形式主要模仿各种性格测试。学生通过语音回答各个问题后，基于学生给到的信息，生成各自的性格类型，作为学生的个人信息保存、并在个人中心中展示；同时寒雪会基于学生给到的信息和生成的性格类型，给出简单的解读  新版桌面 3.1 新版桌面结构说明  新版桌面分为三层，具体见下方表格  3.2 各组件模块说明 3.2.1 功能模块 3.2.1.1 学习计划  进入桌面后，根据在家长沟通环节所收集到的学生信息，匹配规则展示对应的学习计划内容；   【0610补充】——家访结果数据未同步至桌面异常case处理 3.2.1.2 新手任务 ==以下是P1需求==  新增「新手任务」模块，展示核心自研产品的新手引导内容；   核心自研产品的新手引导形态为互动剧本模式，用户跟随设定的剧本，完成核心功能、交互的体验；   各学段新手引导产品对应关系：   保留现有介绍/引导视频的应用：   家长端小程序   精准学系列？   同步语文辅导   同步英语辅导   金牌视频   异常case处理：   若用户在进行某个产品的新手任务时点击退出按钮，需要二次弹窗提醒确认；   若用户杀进程或退出后，需要记录退出的节点，下次进入后走异常恢复；   已经完成的新手任务允许再次进入；   同一个主账号的不同子账号下，相同产品的新手引导任务进度互通（可能改成不互通）；任务完成进度百分比每个子账号单独计算；   如，第一个子账号是2年级，且完成了所有新手引导任务，进度为3/3=100%；然后新建了第二个子账号，5年级，此时新手引导任务为3/5=60%；  3.2.2 灵动岛（0520更新：新版桌面无灵动岛需求，使用静态文案，后续迭代再补灵动岛需求）  灵动岛与 iPhone灵动岛类似，目前的设定是显示当前用户的信息和学习状态，仅在桌面出现，不扩展到其他具体应用；   后续「灵动岛」会发展成寒雪老师心理活动的外化出口；一方面扩展文案的表达内容，在不同时间、用户不同行为表现下，文案处展示不同内容，另一方面扩展除桌面之外的出现场景；   「灵动岛」包含主要元素    用户头像   可点击，进入个人中心   核心展示区域   具体交互需求见下方   圆环进度（P1，本期不做）   可点击，进入新手任务页   灵动岛中不同文案指令内容优先级排序（0509补充）  3.3 子账号声纹录入  背景说明：   目前在数学一对一等应用的上课场景中，观察到经常会出现学生和家长同时说话，或者家长代替学生回答的情况，导致大模型判断结果混乱；   此外桌面改版后会增加寒雪唤醒功能，未来可能需要与子账号的声音进行关联做出区分；   基于上面两种case，需要增加对学生的主体音色录入环节。   需求说明：   针对学生子账号增加「声纹录入」环节，学生需按照指示完成声音的录入；  3.4 个人中心调整（待调整0508评审） 【PRD】【桌面】个人中心+系统更新视觉优化@陈鹏帆(希望寒雪老师直播间不讲错)（0514更新：待基于最新版本的个人中心重新修改原始文档中的示意图）  增加 家长端小程序 二维码   数学一对一体验营剧本调整（0515迭代已上线）  原本数学一对一的体验营中包含「寒雪破冰」流程，承担寒雪向用户自我介绍的流程；在本次开机流程调整后，其他产品中的寒雪自我介绍流程可以删除，避免重复；  【PRD】0515 数学一对一优化 家长端小程序调整  创建学生账号时，隐藏「平时数学成绩」栏。   完成子账号的寒雪家访流程后，往家长端小程序发送通知，并在学生首页展示家访结果报告；  数据统计需求 6.1 【补充】用户行为路径分析后台子账号展示信息  增加首页表格中展示字段和筛选条件   增加子账号展示的详细信息   展示寒雪家访的详细信息  6.2 【新增】用户行为路径分析后台数据统计模块  关联文档 【进行中】区分家长和学生的开机流程 设计稿链接：https://www.figma.com/design/wTnpqK3CSHRYK6e7KLvZrV/%E3%80%90250214%E3%80%91%E6%A1%8C%E9%9D%A2?node-id=12444-9895&t=Biv7dP0sAzCS22aw-1  "},    "query": "开始吧",
+    "response_mode": "streaming",
+    "conversation_id": "",
+    "user": "abc-123"
+}; responseBody:data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "[\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "   ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " {\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "        \"module\":", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \"\u5f00\u673a\u53ca\u8d26\u53f7", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u521d\u59cb\u5316\u6d41\u7a0b\",\n       ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \"function\": \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u65b0\u589e\u5206\u89d2\u8272\u5bd2", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u96ea\u6c9f\u901a\u6d41\u7a0b\",\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "        \"demand_point", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\": \"\u5267\u672c\u94fe\u63a5", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\uff1a\u301004", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "23\u3011\u65b0\u5f00", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u673a\u6d41\u7a0b\u5267\u672c\",\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "        \"core_con", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "cepts\": \"\u5267\u672c", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\"\n    },\n   ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " {\n        \"module", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\": \"\u5f00\u673a\u53ca", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u8d26\u53f7\u521d\u59cb\u5316\u6d41\u7a0b\",\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "        \"function\":", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \"\u65b0\u589e\u5206\u89d2\u8272", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u5bd2\u96ea\u6c9f\u901a\u6d41\u7a0b", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\",\n        \"demand", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "_point\": \"\u4e0d\u540c", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u5e74\u7ea7\u3001\u4e0d\u540c\u5b50", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u8d26\u53f7\u72b6\u6001\uff08\u521d\u6b21", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u5efa\u5b50\u8d26\u53f7or", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u540e\u7eed\u5efa\u5b50\u8d26\u53f7", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\uff09\u3001\u4e0d\u540c\u5f00\u673a\u6d41\u7a0b", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u89d2\u8272\u8eab\u4efd\uff08\u5bb6\u957f", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "or\u5b66\u751f\uff09\u7684", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u6d41\u7a0b\u8d70\u5411\u68b3\u7406\",\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "        \"core_con", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "cepts\": \"\u5e74\u7ea7", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": ", \u5b50\u8d26\u53f7", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u72b6\u6001, \u5f00\u673a", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u6d41\u7a0b\u89d2\u8272\u8eab\u4efd\"\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "    },\n    {\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "        \"module\":", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \"\u5f00\u673a\u53ca\u8d26\u53f7", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u521d\u59cb\u5316\u6d41\u7a0b\",\n       ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \"function\": \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u65b0\u589e\u5206\u89d2\u8272\u5bd2", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u96ea\u6c9f\u901a\u6d41\u7a0b\",\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "        \"demand_point", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\": \"TTS", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u8c03\u7528\uff1a\u5267\u672c", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u4e2d\u5b58\u5728\u5360\u4f4d", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u7b26\u7684\u53f0\u8bcd\u9700\u8981", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u8c03\u7528\u7ebf\u4e0a\u901a\u7528", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u7248-24", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "0228", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u6a21\u578b\u751f\u6210\",\n       ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \"core_concepts", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\": \"TTS", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": ", \u6a21\u578b", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u751f\u6210\"\n    },\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "    {\n        \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "module\": \"\u5bb6\u957f", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u6c9f\u901a\u6d41\u7a0b\",\n       ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \"function\": \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u4fe1\u606f\u6536\u96c6\",\n       ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \"demand_point\":", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \"\u7528\u6237\u548cAI", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u5728\u4e09\u4e2a\u9636\u6bb5\uff08", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u57fa\u7840\u4fe1\u606f\u3001\u5b66\u4e60", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u8868\u73b0\u3001\u5bb6\u5ead\u4e92\u52a8", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\uff09\u7684\u5bf9\u8bdd\u65e5", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u5fd7\u6309\u7167\u89d2\u8272\u6253", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u4e0a\u8eab\u4efd\u6807\u7b7e\u540e", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\uff0c\u62fc\u63a5\u5230\u4e00\u8d77", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\uff0c\u5f62\u6210\u5b8c\u6574\u7684\u4fe1\u606f", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u6536\u96c6\u5bf9\u8bdd\u65e5\u5fd7", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\",\n        \"core", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "_concepts\": \"", "from_variable_selector": null}
+
+event: ping
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u4fe1\u606f\u6536\u96c6, \u5bf9", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u8bdd\u65e5\u5fd7,", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \u8eab\u4efd\u6807\u7b7e", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\"\n    },\n   ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " {\n        \"module", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\": \"\u5bb6\u957f\u6c9f\u901a", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u6d41\u7a0b\",\n        \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "function\": \"\u5b66\u751f", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u6807\u7b7e\u63d0\u53d6\",\n       ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \"demand_point\":", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \"\u6570\u636e\u62fc\u63a5", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u5b8c\u6210\u540e\uff0c\u5c06\u5185\u5bb9", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u63d0\u4f9b\u7ed9\u201c\u5b66\u751f", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u6807\u7b7e\u63d0\u53d6\u63d0\u793a\u8bcd", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u201d\uff0c\u5b8c\u6210\u5bf9\u5b66\u751f\u753b\u50cf", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u7684\u6807\u7b7e\u63d0\u53d6\u5de5\u4f5c", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\",\n        \"core", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "_concepts\": \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u5b66\u751f\u6807\u7b7e\u63d0\u53d6,", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \u63d0\u793a\u8bcd,", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \u5b66\u751f\u753b\u50cf", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\"\n    },\n   ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " {\n        \"module", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\": \"\u5bb6\u957f\u6c9f\u901a", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u6d41\u7a0b\",\n        \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "function\": \"\u5b66\u4e60", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u89c4\u5212\u8bf4\u660e\",\n       ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \"demand_point\":", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \"\u5206\u4e3a\u201c\u753b\u9762", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u5c55\u793a\u201d\u548c\u201c", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u5bd2\u96ea\u89e3\u8bfb\u201d", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u4e24\u4e2a\u90e8\u5206\",\n       ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \"core_concepts", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\": \"\u753b\u9762\u5c55\u793a", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": ", \u5bd2\u96ea", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u89e3\u8bfb\"\n    },\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "    {\n        \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "module\": \"\u5bb6\u957f", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u6c9f\u901a\u6d41\u7a0b\",\n       ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \"function\": \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u5b66\u4e60\u89c4\u5212\u8bf4\u660e\",\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "        \"demand_point", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\": \"\u753b\u9762\u5c55\u793a", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\uff1a\u5982\u4e0b\u8868\uff0c", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u5206\u4e3a5\u4e2a\u6a21\u5757", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\uff0c\u6bcf\u4e2a\u6a21\u5757\u5c55\u793a", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u4e0d\u540c\u7684\u5185\u5bb9\uff1b\u6bcf\u4e2a", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u6a21\u5757\u51fa\u73b0\u987a\u5e8f\u6309\u7167", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u4e0b\u8868\u4e2d\u7684\u7f16\u53f7", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u987a\u5e8f\",\n        \"", "from_variable_selector": null}
+
+event: ping
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "core_concepts\":", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \"\u753b\u9762\u5c55\u793a,", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \u6a21\u5757\"\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "    },\n    {\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "        \"module\":", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \"\u5bb6\u957f\u6c9f\u901a\u6d41\u7a0b", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\",\n        \"function", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\": \"\u5b66\u4e60\u89c4\u5212", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u8bf4\u660e\",\n        \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "demand_point\": \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u5bd2\u96ea\u89e3\u8bfb\uff1a", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u4e0e\u753b\u9762\u5c55\u793a\u7684", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u6a21\u5757\u5bf9\u5e94\uff0c\u4f46", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u8bed\u97f3\u5185\u5bb9\u662f\u53e6\u5916", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u4ea7\u51fa\uff1b\u5982\u753b\u9762", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u5c55\u793a\u7684\u662f\u7b2c\u4e00\u5757", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u201c\u5b66\u751f\u60c5\u51b5\u603b\u7ed3", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u201d\uff0c\u90a3\u4e48\u5bd2\u96ea", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u89e3\u8bfb\u7684\u5185\u5bb9\u4e5f\u662f\u8fd9\u4e00", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u90e8\u5206\u7684\u5185\u5bb9\",\n       ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \"core_concepts", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\": \"\u5bd2\u96ea", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u89e3\u8bfb, \u8bed\u97f3", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u5185\u5bb9\"\n    },\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "    {\n        \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "module\": \"\u65b0\u7248", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u684c\u9762\",\n        \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "function\": \"\u529f\u80fd", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u6a21\u5757\",\n        \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "demand_point\": \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u8fdb\u5165\u684c\u9762\u540e\uff0c", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u6839\u636e\u5728\u5bb6\u957f\u6c9f\u901a", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u73af\u8282\u6240\u6536\u96c6\u5230", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u7684\u5b66\u751f\u4fe1\u606f\uff0c\u5339\u914d", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u89c4\u5219\u5c55\u793a\u5bf9\u5e94\u7684\u5b66\u4e60", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u8ba1\u5212\u5185\u5bb9\",\n       ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \"core_concepts", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\": \"\u5b66\u4e60\u8ba1\u5212", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": ", \u89c4\u5219", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u5339\u914d\"\n    },\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "    {\n        \"", "from_variable_selector": null}
+
+event: ping
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "module\": \"\u65b0\u7248", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u684c\u9762\",\n        \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "function\": \"\u529f\u80fd", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u6a21\u5757\",\n        \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "demand_point\": \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u5bb6\u8bbf\u7ed3\u679c\u6570\u636e", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u672a\u540c\u6b65\u81f3\u684c\u9762", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u5f02\u5e38case\u5904\u7406\",\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "        \"core_con", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "cepts\": \"\u5bb6", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u8bbf\u7ed3\u679c,", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \u5f02\u5e38\u5904\u7406\"\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "    },\n    {\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "        \"module\":", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \"\u65b0\u7248\u684c\u9762\",\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "        \"function\":", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \"\u65b0\u624b\u4efb\u52a1\",\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "        \"demand_point", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\": \"\u65b0\u589e\u300c", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u65b0\u624b\u4efb\u52a1\u300d\u6a21\u5757", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\uff0c\u5c55\u793a\u6838\u5fc3\u81ea", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u7814\u4ea7\u54c1\u7684\u65b0\u624b", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u5f15\u5bfc\u5185\u5bb9\",\n       ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \"core_concepts", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\": \"\u65b0\u624b\u4efb\u52a1", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": ", \u65b0\u624b\u5f15\u5bfc", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\"\n    },\n   ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " {\n        \"module", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\": \"\u65b0\u7248\u684c\u9762", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\",\n        \"function", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\": \"\u65b0\u624b\u4efb\u52a1", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\",\n        \"demand", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "_point\": \"\u6838\u5fc3", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u81ea\u7814\u4ea7\u54c1\u7684\u65b0", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u624b\u5f15\u5bfc\u5f62\u6001\u4e3a", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u4e92\u52a8\u5267\u672c\u6a21\u5f0f\uff0c", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u7528\u6237\u8ddf\u968f\u8bbe\u5b9a\u7684", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u5267\u672c\uff0c\u5b8c\u6210\u6838\u5fc3", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u529f\u80fd\u3001\u4ea4\u4e92\u7684", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u4f53\u9a8c\",\n        \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "core_concepts\":", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \"\u4e92\u52a8\u5267\u672c,", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \u6838\u5fc3\u529f\u80fd", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": ", \u4ea4\u4e92\u4f53\u9a8c", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\"\n    },\n   ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " {\n        \"module", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\": \"\u65b0\u7248\u684c\u9762", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\",\n        \"function", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\": \"\u65b0\u624b\u4efb\u52a1", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\",\n        \"demand", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "_point\": \"\u82e5", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u7528\u6237\u5728\u8fdb\u884c\u67d0\u4e2a", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u4ea7\u54c1\u7684\u65b0\u624b\u4efb\u52a1", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u65f6\u70b9\u51fb\u9000\u51fa\u6309\u94ae", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\uff0c\u9700\u8981\u4e8c\u6b21\u5f39", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u7a97\u63d0\u9192\u786e\u8ba4\",\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "        \"core_con", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "cepts\": \"\u9000\u51fa", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u6309\u94ae, \u4e8c\u6b21", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u786e\u8ba4\"\n    },\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "    {\n        \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "module\": \"\u65b0\u7248", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u684c\u9762\",\n        \"", "from_variable_selector": null}
+
+event: ping
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "function\": \"\u65b0\u624b", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u4efb\u52a1\",\n        \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "demand_point\": \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u82e5\u7528\u6237\u6740\u8fdb\u7a0b", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u6216\u9000\u51fa\u540e\uff0c", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u9700\u8981\u8bb0\u5f55\u9000\u51fa\u7684", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u8282\u70b9\uff0c\u4e0b\u6b21\u8fdb\u5165", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u540e\u8d70\u5f02\u5e38\u6062\u590d", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\",\n        \"core", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "_concepts\": \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u6740\u8fdb\u7a0b,", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \u8282\u70b9\u8bb0\u5f55", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": ", \u5f02\u5e38", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u6062\u590d\"\n    },\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "    {\n        \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "module\": \"\u65b0\u7248", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u684c\u9762\",\n        \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "function\": \"\u65b0\u624b", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u4efb\u52a1\",\n        \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "demand_point\": \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u5df2\u7ecf\u5b8c\u6210\u7684\u65b0\u624b", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u4efb\u52a1\u5141\u8bb8\u518d\u6b21\u8fdb\u5165", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\",\n        \"core", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "_concepts\": \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u518d\u6b21\u8fdb\u5165\"\n   ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " },\n    {\n       ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \"module\": \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u65b0\u7248\u684c\u9762\",\n       ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \"function\": \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u65b0\u624b\u4efb\u52a1\",\n       ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \"demand_point\":", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \"\u540c\u4e00\u4e2a\u4e3b\u8d26\u53f7", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u7684\u4e0d\u540c\u5b50\u8d26\u53f7\u4e0b", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\uff0c\u76f8\u540c\u4ea7\u54c1\u7684\u65b0", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u624b\u5f15\u5bfc\u4efb\u52a1\u8fdb\u5ea6", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u4e92\u901a\",\n        \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "core_concepts\":", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \"\u8fdb\u5ea6\u4e92\u901a\"\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "    },\n    {\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "        \"module\":", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \"\u65b0\u7248\u684c\u9762\",\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "        \"function\":", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \"\u4e2a\u4eba\u4e2d\u5fc3\u8c03\u6574", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\",\n        \"demand", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "_point\": \"\u589e\u52a0", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \u5bb6\u957f\u7aef", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u5c0f\u7a0b\u5e8f \u4e8c\u7ef4\u7801\",\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "        \"core_con", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "cepts\": \"\u5bb6\u957f", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u7aef\u5c0f\u7a0b\u5e8f, ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u4e8c\u7ef4\u7801\"\n    },\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "    {\n        \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "module\": \"\u65b0\u7248", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u684c\u9762\",\n        \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "function\": \"\u4e2a\u4eba", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u4e2d\u5fc3\u8c03\u6574\",\n       ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \"demand_point\":", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \"\u6570\u5b66\u4e00\u5bf9\u4e00\u4f53", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u9a8c\u8425\u5267\u672c\u8c03\u6574", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\",\n        \"core", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "_concepts\": \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u5267\u672c\u8c03\u6574\"\n   ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " },\n    {\n       ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \"module\": \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u65b0\u7248\u684c\u9762\",\n       ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \"function\": \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u4e2a\u4eba\u4e2d\u5fc3\u8c03\u6574\",\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "        \"demand_point", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\": \"\u521b\u5efa\u5b66\u751f", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u8d26\u53f7\u65f6\uff0c\u9690\u85cf", "from_variable_selector": null}
+
+event: ping
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u300c\u5e73\u65f6\u6570\u5b66\u6210\u7ee9", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u300d\u680f\",\n       ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \"core_concepts", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\": \"\u9690\u85cf\u5b57\u6bb5", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\"\n    },\n   ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " {\n        \"module", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\": \"\u65b0\u7248\u684c\u9762", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\",\n        \"function", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\": \"\u4e2a\u4eba\u4e2d\u5fc3", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u8c03\u6574\",\n        \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "demand_point\": \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u5b8c\u6210\u5b50\u8d26\u53f7\u7684", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u5bd2\u96ea\u5bb6\u8bbf", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u6d41\u7a0b\u540e\uff0c\u5f80", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u5bb6\u957f\u7aef\u5c0f\u7a0b\u5e8f\u53d1\u9001", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u901a\u77e5\uff0c\u5e76\u5728\u5b66\u751f", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u9996\u9875\u5c55\u793a\u5bb6\u8bbf", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u7ed3\u679c\u62a5\u544a\",\n       ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \"core_concepts", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\": \"\u5bb6\u8bbf", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u6d41\u7a0b, \u901a\u77e5", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": ", \u7ed3\u679c\u62a5\u544a", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\"\n    },\n   ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " {\n        \"module", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\": \"\u5b50\u8d26\u53f7", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u58f0\u7eb9\u5f55\u5165\",\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "        \"function\":", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \"\u80cc\u666f\u8bf4\u660e\",\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "        \"demand_point", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\": \"\u9488\u5bf9\u5b66\u751f", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u5b50\u8d26\u53f7\u589e\u52a0\u300c", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u58f0\u7eb9\u5f55\u5165\u300d", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u73af\u8282\uff0c\u5b66\u751f\u9700", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u6309\u7167\u6307\u793a\u5b8c\u6210\u58f0\u97f3", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u7684\u5f55\u5165\",\n       ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \"core_concepts", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\": \"\u58f0\u7eb9", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u5f55\u5165\"\n    },\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "    {\n        \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "module\": \"\u6570\u636e", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u7edf\u8ba1\u9700\u6c42\",\n       ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \"function\": \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u7528\u6237\u884c\u4e3a\u8def\u5f84\u5206\u6790", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u540e\u53f0\u5b50\u8d26\u53f7\u5c55\u793a", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u4fe1\u606f\",\n        \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "demand_point\": \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u589e\u52a0\u9996\u9875\u8868\u683c\u4e2d", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u5c55\u793a\u5b57\u6bb5\u548c\u7b5b\u9009", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u6761\u4ef6\",\n        \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "core_concepts\":", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \"\u5c55\u793a\u5b57\u6bb5,", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \u7b5b\u9009", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u6761\u4ef6\"\n    },\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "    {\n        \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "module\": \"\u6570\u636e", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u7edf\u8ba1\u9700\u6c42\",\n       ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \"function\": \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u7528\u6237\u884c\u4e3a\u8def\u5f84\u5206\u6790", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u540e\u53f0\u5b50\u8d26\u53f7\u5c55\u793a", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u4fe1\u606f\",\n        \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "demand_point\": \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u589e\u52a0\u5b50\u8d26\u53f7\u5c55\u793a", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u7684\u8be6\u7ec6\u4fe1\u606f\",\n", "from_variable_selector": null}
+
+event: ping
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "        \"core_con", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "cepts\": \"\u5b50", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u8d26\u53f7, \u8be6\u7ec6", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u4fe1\u606f\"\n    },\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "    {\n        \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "module\": \"\u6570\u636e", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u7edf\u8ba1\u9700\u6c42\",\n       ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": " \"function\": \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u7528\u6237\u884c\u4e3a\u8def\u5f84\u5206\u6790", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u540e\u53f0\u5b50\u8d26\u53f7\u5c55\u793a", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u4fe1\u606f\",\n        \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "demand_point\": \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u5c55\u793a\u5bd2\u96ea\u5bb6", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u8bbf\u7684\u8be6\u7ec6\u4fe1\u606f", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\",\n        \"core", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "_concepts\": \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\u5bd2\u96ea\u5bb6\u8bbf", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": ", \u8be6\u7ec6\u4fe1\u606f", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "\"\n    }\n]", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "answer": "", "from_variable_selector": null}
+
+data: {"event": "message_end", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "id": "81b49569-4f93-4c09-bd02-c3083065861a", "metadata": {"usage": {"prompt_tokens": 2692, "prompt_unit_price": "0.0008", "prompt_price_unit": "0.001", "prompt_price": "0.0021536", "completion_tokens": 1519, "completion_unit_price": "0.002", "completion_price_unit": "0.001", "completion_price": "0.0030380", "total_tokens": 4211, "total_price": "0.0051916", "currency": "RMB", "latency": 62.93860898073763}}}
+
+data: {"event": "tts_message_end", "conversation_id": "08f77659-67dd-490b-83ad-358733bcb929", "message_id": "81b49569-4f93-4c09-bd02-c3083065861a", "created_at": 1750351312, "task_id": "e7515a67-42bf-4675-af95-4bf4f419dd42", "audio": ""}
+
+; cost:63281ms;
+00:42:55.940 [http-nio-8080-exec-15] INFO  c.r.c.u.d.DifyUtil - [get_value,58] - dify value serializable------------------[{"module":"开机及账号初始化流程","function":"新增分角色寒雪沟通流程","demand_point":"剧本链接：【0423】新开机流程剧本","core_concepts":"剧本"},{"module":"开机及账号初始化流程","function":"新增分角色寒雪沟通流程","demand_point":"不同年级、不同子账号状态（初次建子账号or后续建子账号）、不同开机流程角色身份（家长or学生）的流程走向梳理","core_concepts":"年级, 子账号状态, 开机流程角色身份"},{"module":"开机及账号初始化流程","function":"新增分角色寒雪沟通流程","demand_point":"TTS调用：剧本中存在占位符的台词需要调用线上通用版-240228模型生成","core_concepts":"TTS, 模型生成"},{"module":"家长沟通流程","function":"信息收集","demand_point":"用户和AI在三个阶段（基础信息、学习表现、家庭互动）的对话日志按照角色打上身份标签后，拼接到一起，形成完整的信息收集对话日志","core_concepts":"信息收集, 对话日志, 身份标签"},{"module":"家长沟通流程","function":"学生标签提取","demand_point":"数据拼接完成后，将内容提供给“学生标签提取提示词”，完成对学生画像的标签提取工作","core_concepts":"学生标签提取, 提示词, 学生画像"},{"module":"家长沟通流程","function":"学习规划说明","demand_point":"分为“画面展示”和“寒雪解读”两个部分","core_concepts":"画面展示, 寒雪解读"},{"module":"家长沟通流程","function":"学习规划说明","demand_point":"画面展示：如下表，分为5个模块，每个模块展示不同的内容；每个模块出现顺序按照下表中的编号顺序","core_concepts":"画面展示, 模块"},{"module":"家长沟通流程","function":"学习规划说明","demand_point":"寒雪解读：与画面展示的模块对应，但语音内容是另外产出；如画面展示的是第一块“学生情况总结”，那么寒雪解读的内容也是这一部分的内容","core_concepts":"寒雪解读, 语音内容"},{"module":"新版桌面","function":"功能模块","demand_point":"进入桌面后，根据在家长沟通环节所收集到的学生信息，匹配规则展示对应的学习计划内容","core_concepts":"学习计划, 规则匹配"},{"module":"新版桌面","function":"功能模块","demand_point":"家访结果数据未同步至桌面异常case处理","core_concepts":"家访结果, 异常处理"},{"module":"新版桌面","function":"新手任务","demand_point":"新增「新手任务」模块，展示核心自研产品的新手引导内容","core_concepts":"新手任务, 新手引导"},{"module":"新版桌面","function":"新手任务","demand_point":"核心自研产品的新手引导形态为互动剧本模式，用户跟随设定的剧本，完成核心功能、交互的体验","core_concepts":"互动剧本, 核心功能, 交互体验"},{"module":"新版桌面","function":"新手任务","demand_point":"若用户在进行某个产品的新手任务时点击退出按钮，需要二次弹窗提醒确认","core_concepts":"退出按钮, 二次确认"},{"module":"新版桌面","function":"新手任务","demand_point":"若用户杀进程或退出后，需要记录退出的节点，下次进入后走异常恢复","core_concepts":"杀进程, 节点记录, 异常恢复"},{"module":"新版桌面","function":"新手任务","demand_point":"已经完成的新手任务允许再次进入","core_concepts":"再次进入"},{"module":"新版桌面","function":"新手任务","demand_point":"同一个主账号的不同子账号下，相同产品的新手引导任务进度互通","core_concepts":"进度互通"},{"module":"新版桌面","function":"个人中心调整","demand_point":"增加 家长端小程序 二维码","core_concepts":"家长端小程序, 二维码"},{"module":"新版桌面","function":"个人中心调整","demand_point":"数学一对一体验营剧本调整","core_concepts":"剧本调整"},{"module":"新版桌面","function":"个人中心调整","demand_point":"创建学生账号时，隐藏「平时数学成绩」栏","core_concepts":"隐藏字段"},{"module":"新版桌面","function":"个人中心调整","demand_point":"完成子账号的寒雪家访流程后，往家长端小程序发送通知，并在学生首页展示家访结果报告","core_concepts":"家访流程, 通知, 结果报告"},{"module":"子账号声纹录入","function":"背景说明","demand_point":"针对学生子账号增加「声纹录入」环节，学生需按照指示完成声音的录入","core_concepts":"声纹录入"},{"module":"数据统计需求","function":"用户行为路径分析后台子账号展示信息","demand_point":"增加首页表格中展示字段和筛选条件","core_concepts":"展示字段, 筛选条件"},{"module":"数据统计需求","function":"用户行为路径分析后台子账号展示信息","demand_point":"增加子账号展示的详细信息","core_concepts":"子账号, 详细信息"},{"module":"数据统计需求","function":"用户行为路径分析后台子账号展示信息","demand_point":"展示寒雪家访的详细信息","core_concepts":"寒雪家访, 详细信息"}]
+00:44:45.343 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+00:44:45.413 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,666] - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+00:44:45.413 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+00:44:45.413 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,740] - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+00:44:45.413 [SpringApplicationShutdownHook] INFO  sys-user - [shutdownAsyncManager,31] - ====关闭后台任务任务线程池====
+00:44:45.415 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2204] - {dataSource-1} closing ...
+00:44:45.421 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2277] - {dataSource-1} closed

@@ -1,0 +1,1563 @@
+00:18:52.770 [http-nio-8080-exec-4] ERROR c.r.f.w.e.GlobalExceptionHandler - [handleRuntimeException,100] - 请求地址'/login',发生未知异常.
+com.ruoyi.common.exception.user.CaptchaException: 验证码错误
+	at com.ruoyi.framework.web.service.SysLoginService.validateCaptcha(SysLoginService.java:127)
+	at com.ruoyi.framework.web.service.SysLoginService.login(SysLoginService.java:67)
+	at com.ruoyi.web.controller.system.SysLoginController.login(SysLoginController.java:53)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:903)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:809)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:114)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at com.ruoyi.common.filter.RepeatableFilter.doFilter(RepeatableFilter.java:43)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:96)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at com.ruoyi.framework.security.filter.JwtAuthenticationTokenFilter.doFilterInternal(JwtAuthenticationTokenFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:935)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1792)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.lang.Thread.run(Thread.java:750)
+01:20:51.481 [http-nio-8080-exec-3] ERROR c.r.f.w.e.GlobalExceptionHandler - [handleRuntimeException,100] - 请求地址'/testers/case/save/import-file',发生未知异常.
+java.lang.RuntimeException: 文件类型不支持
+	at com.ruoyi.system.testers.impl.CaseSaveServiceImpl.importFile(CaseSaveServiceImpl.java:43)
+	at com.ruoyi.web.controller.testers.CaseSaveController.importData(CaseSaveController.java:33)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:903)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:809)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:114)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at com.ruoyi.common.filter.RepeatableFilter.doFilter(RepeatableFilter.java:39)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:96)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at com.ruoyi.framework.security.filter.JwtAuthenticationTokenFilter.doFilterInternal(JwtAuthenticationTokenFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:935)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1792)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.lang.Thread.run(Thread.java:750)
+01:36:06.612 [http-nio-8080-exec-7] ERROR c.r.f.w.e.GlobalExceptionHandler - [handleRuntimeException,100] - 请求地址'/testers/case/save/import-file',发生未知异常.
+org.springframework.web.multipart.MaxUploadSizeExceededException: Maximum upload size exceeded; nested exception is java.lang.IllegalStateException: org.apache.tomcat.util.http.fileupload.impl.SizeLimitExceededException: the request was rejected because its size (188602479) exceeds the configured maximum (20971520)
+	at org.springframework.web.multipart.support.StandardMultipartHttpServletRequest.handleParseFailure(StandardMultipartHttpServletRequest.java:124)
+	at org.springframework.web.multipart.support.StandardMultipartHttpServletRequest.parseRequest(StandardMultipartHttpServletRequest.java:115)
+	at org.springframework.web.multipart.support.StandardMultipartHttpServletRequest.<init>(StandardMultipartHttpServletRequest.java:88)
+	at org.springframework.web.multipart.support.StandardServletMultipartResolver.resolveMultipart(StandardServletMultipartResolver.java:122)
+	at org.springframework.web.servlet.DispatcherServlet.checkMultipart(DispatcherServlet.java:1210)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1044)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:114)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at com.ruoyi.common.filter.RepeatableFilter.doFilter(RepeatableFilter.java:39)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:96)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at com.ruoyi.framework.security.filter.JwtAuthenticationTokenFilter.doFilterInternal(JwtAuthenticationTokenFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:935)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1792)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.IllegalStateException: org.apache.tomcat.util.http.fileupload.impl.SizeLimitExceededException: the request was rejected because its size (188602479) exceeds the configured maximum (20971520)
+	at org.apache.catalina.connector.Request.parseParts(Request.java:2665)
+	at org.apache.catalina.connector.Request.getParts(Request.java:2525)
+	at org.apache.catalina.connector.RequestFacade.getParts(RequestFacade.java:795)
+	at javax.servlet.http.HttpServletRequestWrapper.getParts(HttpServletRequestWrapper.java:326)
+	at javax.servlet.http.HttpServletRequestWrapper.getParts(HttpServletRequestWrapper.java:326)
+	at javax.servlet.http.HttpServletRequestWrapper.getParts(HttpServletRequestWrapper.java:326)
+	at org.springframework.web.multipart.support.StandardMultipartHttpServletRequest.parseRequest(StandardMultipartHttpServletRequest.java:95)
+	... 100 common frames omitted
+Caused by: org.apache.tomcat.util.http.fileupload.impl.SizeLimitExceededException: the request was rejected because its size (188602479) exceeds the configured maximum (20971520)
+	at org.apache.tomcat.util.http.fileupload.impl.FileItemIteratorImpl.init(FileItemIteratorImpl.java:161)
+	at org.apache.tomcat.util.http.fileupload.impl.FileItemIteratorImpl.getMultiPartStream(FileItemIteratorImpl.java:205)
+	at org.apache.tomcat.util.http.fileupload.impl.FileItemIteratorImpl.findNextItem(FileItemIteratorImpl.java:224)
+	at org.apache.tomcat.util.http.fileupload.impl.FileItemIteratorImpl.<init>(FileItemIteratorImpl.java:142)
+	at org.apache.tomcat.util.http.fileupload.FileUploadBase.getItemIterator(FileUploadBase.java:252)
+	at org.apache.tomcat.util.http.fileupload.FileUploadBase.parseRequest(FileUploadBase.java:276)
+	at org.apache.catalina.connector.Request.parseParts(Request.java:2624)
+	... 106 common frames omitted
+01:39:40.702 [http-nio-8080-exec-15] ERROR c.r.f.w.e.GlobalExceptionHandler - [handleRuntimeException,100] - 请求地址'/system/user/importData',发生未知异常.
+org.springframework.web.multipart.MaxUploadSizeExceededException: Maximum upload size exceeded; nested exception is java.lang.IllegalStateException: org.apache.tomcat.util.http.fileupload.impl.SizeLimitExceededException: the request was rejected because its size (188602479) exceeds the configured maximum (20971520)
+	at org.springframework.web.multipart.support.StandardMultipartHttpServletRequest.handleParseFailure(StandardMultipartHttpServletRequest.java:124)
+	at org.springframework.web.multipart.support.StandardMultipartHttpServletRequest.parseRequest(StandardMultipartHttpServletRequest.java:115)
+	at org.springframework.web.multipart.support.StandardMultipartHttpServletRequest.<init>(StandardMultipartHttpServletRequest.java:88)
+	at org.springframework.web.multipart.support.StandardServletMultipartResolver.resolveMultipart(StandardServletMultipartResolver.java:122)
+	at org.springframework.web.servlet.DispatcherServlet.checkMultipart(DispatcherServlet.java:1210)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1044)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:114)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at com.ruoyi.common.filter.RepeatableFilter.doFilter(RepeatableFilter.java:39)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:96)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at com.ruoyi.framework.security.filter.JwtAuthenticationTokenFilter.doFilterInternal(JwtAuthenticationTokenFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at com.ruoyi.common.filter.XssFilter.doFilter(XssFilter.java:55)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:935)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1792)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.IllegalStateException: org.apache.tomcat.util.http.fileupload.impl.SizeLimitExceededException: the request was rejected because its size (188602479) exceeds the configured maximum (20971520)
+	at org.apache.catalina.connector.Request.parseParts(Request.java:2665)
+	at org.apache.catalina.connector.Request.getParts(Request.java:2525)
+	at org.apache.catalina.connector.RequestFacade.getParts(RequestFacade.java:795)
+	at javax.servlet.http.HttpServletRequestWrapper.getParts(HttpServletRequestWrapper.java:326)
+	at javax.servlet.http.HttpServletRequestWrapper.getParts(HttpServletRequestWrapper.java:326)
+	at javax.servlet.http.HttpServletRequestWrapper.getParts(HttpServletRequestWrapper.java:326)
+	at javax.servlet.http.HttpServletRequestWrapper.getParts(HttpServletRequestWrapper.java:326)
+	at org.springframework.web.multipart.support.StandardMultipartHttpServletRequest.parseRequest(StandardMultipartHttpServletRequest.java:95)
+	... 103 common frames omitted
+Caused by: org.apache.tomcat.util.http.fileupload.impl.SizeLimitExceededException: the request was rejected because its size (188602479) exceeds the configured maximum (20971520)
+	at org.apache.tomcat.util.http.fileupload.impl.FileItemIteratorImpl.init(FileItemIteratorImpl.java:161)
+	at org.apache.tomcat.util.http.fileupload.impl.FileItemIteratorImpl.getMultiPartStream(FileItemIteratorImpl.java:205)
+	at org.apache.tomcat.util.http.fileupload.impl.FileItemIteratorImpl.findNextItem(FileItemIteratorImpl.java:224)
+	at org.apache.tomcat.util.http.fileupload.impl.FileItemIteratorImpl.<init>(FileItemIteratorImpl.java:142)
+	at org.apache.tomcat.util.http.fileupload.FileUploadBase.getItemIterator(FileUploadBase.java:252)
+	at org.apache.tomcat.util.http.fileupload.FileUploadBase.parseRequest(FileUploadBase.java:276)
+	at org.apache.catalina.connector.Request.parseParts(Request.java:2624)
+	... 110 common frames omitted
+01:42:42.493 [http-nio-8080-exec-19] ERROR c.r.f.w.e.GlobalExceptionHandler - [handleRuntimeException,100] - 请求地址'/testers/case/save/import-file',发生未知异常.
+org.springframework.web.multipart.MaxUploadSizeExceededException: Maximum upload size exceeded; nested exception is java.lang.IllegalStateException: org.apache.tomcat.util.http.fileupload.impl.SizeLimitExceededException: the request was rejected because its size (188602479) exceeds the configured maximum (20971520)
+	at org.springframework.web.multipart.support.StandardMultipartHttpServletRequest.handleParseFailure(StandardMultipartHttpServletRequest.java:124)
+	at org.springframework.web.multipart.support.StandardMultipartHttpServletRequest.parseRequest(StandardMultipartHttpServletRequest.java:115)
+	at org.springframework.web.multipart.support.StandardMultipartHttpServletRequest.<init>(StandardMultipartHttpServletRequest.java:88)
+	at org.springframework.web.multipart.support.StandardServletMultipartResolver.resolveMultipart(StandardServletMultipartResolver.java:122)
+	at org.springframework.web.servlet.DispatcherServlet.checkMultipart(DispatcherServlet.java:1210)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1044)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:114)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at com.ruoyi.common.filter.RepeatableFilter.doFilter(RepeatableFilter.java:39)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:96)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at com.ruoyi.framework.security.filter.JwtAuthenticationTokenFilter.doFilterInternal(JwtAuthenticationTokenFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:935)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1792)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.IllegalStateException: org.apache.tomcat.util.http.fileupload.impl.SizeLimitExceededException: the request was rejected because its size (188602479) exceeds the configured maximum (20971520)
+	at org.apache.catalina.connector.Request.parseParts(Request.java:2665)
+	at org.apache.catalina.connector.Request.getParts(Request.java:2525)
+	at org.apache.catalina.connector.RequestFacade.getParts(RequestFacade.java:795)
+	at javax.servlet.http.HttpServletRequestWrapper.getParts(HttpServletRequestWrapper.java:326)
+	at javax.servlet.http.HttpServletRequestWrapper.getParts(HttpServletRequestWrapper.java:326)
+	at javax.servlet.http.HttpServletRequestWrapper.getParts(HttpServletRequestWrapper.java:326)
+	at org.springframework.web.multipart.support.StandardMultipartHttpServletRequest.parseRequest(StandardMultipartHttpServletRequest.java:95)
+	... 100 common frames omitted
+Caused by: org.apache.tomcat.util.http.fileupload.impl.SizeLimitExceededException: the request was rejected because its size (188602479) exceeds the configured maximum (20971520)
+	at org.apache.tomcat.util.http.fileupload.impl.FileItemIteratorImpl.init(FileItemIteratorImpl.java:161)
+	at org.apache.tomcat.util.http.fileupload.impl.FileItemIteratorImpl.getMultiPartStream(FileItemIteratorImpl.java:205)
+	at org.apache.tomcat.util.http.fileupload.impl.FileItemIteratorImpl.findNextItem(FileItemIteratorImpl.java:224)
+	at org.apache.tomcat.util.http.fileupload.impl.FileItemIteratorImpl.<init>(FileItemIteratorImpl.java:142)
+	at org.apache.tomcat.util.http.fileupload.FileUploadBase.getItemIterator(FileUploadBase.java:252)
+	at org.apache.tomcat.util.http.fileupload.FileUploadBase.parseRequest(FileUploadBase.java:276)
+	at org.apache.catalina.connector.Request.parseParts(Request.java:2624)
+	... 106 common frames omitted
+21:44:12.851 [http-nio-8080-exec-18] ERROR c.r.f.w.e.GlobalExceptionHandler - [handleRuntimeException,100] - 请求地址'/testers/case/save/query-function-matrix',发生未知异常.
+java.lang.RuntimeException: dify chat completion invoke error
+	at com.ruoyi.common.utils.dify.DifyUtil.get_dify_value(DifyUtil.java:143)
+	at com.ruoyi.common.utils.dify.DifyUtil.get_value(DifyUtil.java:51)
+	at com.ruoyi.system.testers.impl.CaseSaveServiceImpl.get_function_matrix(CaseSaveServiceImpl.java:60)
+	at com.ruoyi.web.controller.testers.CaseSaveController.importData(CaseSaveController.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:903)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:809)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:114)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at com.ruoyi.common.filter.RepeatableFilter.doFilter(RepeatableFilter.java:43)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:96)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at com.ruoyi.framework.security.filter.JwtAuthenticationTokenFilter.doFilterInternal(JwtAuthenticationTokenFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:935)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1792)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: org.springframework.web.client.HttpClientErrorException$BadRequest: 400 BAD REQUEST: "{"code": "bad_request", "message": "The browser (or proxy) sent a request that this server could not understand.", "status": 400}<EOL>"
+	at org.springframework.web.client.HttpClientErrorException.create(HttpClientErrorException.java:101)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:168)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:122)
+	at org.springframework.web.client.ResponseErrorHandler.handleError(ResponseErrorHandler.java:63)
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:825)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:783)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:717)
+	at org.springframework.web.client.RestTemplate.postForEntity(RestTemplate.java:474)
+	at com.ruoyi.common.utils.dify.DifyUtil.get_dify_value(DifyUtil.java:129)
+	... 110 common frames omitted
+21:47:20.873 [http-nio-8080-exec-8] ERROR c.r.f.w.e.GlobalExceptionHandler - [handleRuntimeException,100] - 请求地址'/testers/case/save/query-function-matrix',发生未知异常.
+java.lang.RuntimeException: dify chat completion invoke error
+	at com.ruoyi.common.utils.dify.DifyUtil.get_dify_value(DifyUtil.java:143)
+	at com.ruoyi.common.utils.dify.DifyUtil.get_value(DifyUtil.java:51)
+	at com.ruoyi.system.testers.impl.CaseSaveServiceImpl.get_function_matrix(CaseSaveServiceImpl.java:60)
+	at com.ruoyi.web.controller.testers.CaseSaveController.importData(CaseSaveController.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:903)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:809)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:114)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at com.ruoyi.common.filter.RepeatableFilter.doFilter(RepeatableFilter.java:43)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:96)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at com.ruoyi.framework.security.filter.JwtAuthenticationTokenFilter.doFilterInternal(JwtAuthenticationTokenFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:935)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1792)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: org.springframework.web.client.HttpClientErrorException$BadRequest: 400 BAD REQUEST: "{"code": "bad_request", "message": "The browser (or proxy) sent a request that this server could not understand.", "status": 400}<EOL>"
+	at org.springframework.web.client.HttpClientErrorException.create(HttpClientErrorException.java:101)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:168)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:122)
+	at org.springframework.web.client.ResponseErrorHandler.handleError(ResponseErrorHandler.java:63)
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:825)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:783)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:717)
+	at org.springframework.web.client.RestTemplate.postForEntity(RestTemplate.java:474)
+	at com.ruoyi.common.utils.dify.DifyUtil.get_dify_value(DifyUtil.java:129)
+	... 110 common frames omitted
+22:42:37.213 [http-nio-8080-exec-29] ERROR c.r.c.u.d.DifyUtil - [get_value,61] - dify value serializable error 响应解析失败 requestBody: {
+        "query": "金肯职业技术学院成人高等教育毕业生登记表 姓名 性闫婷婷 别 女 出生日期 学1996.09.27 号 入学年 2023050367 月 2023 年 3 月 毕业年月 专业名 2025 年 7 月 称 建筑工程技术 层 次 高起专 学习形式 函授 自我鉴定：本人自参加成人大专学习以来，始终保持认真学习的态度，以下 是我的自我鉴定： 一、学习态度端正，目标明确 我深知知识的重要性，因此在学习过程中，始终以提升自身素质和技能为目 标，严格要求自己，确保按时完成学习任务。 二、勤奋刻苦，成绩优良 在学习过程中，我克服了工作与生活的压力，合理安排时间，勤奋学习，取 得了优良的成绩，为今后的职业发展打下了坚实基础。 三、团队协作，乐于助人 在班级活动中，我积极参与，与同学互相学习、交流，共同进步。同时，乐 于帮助他人，赢得了同学们的信任和好评。 四、实践能力强，学以致用 我将所学知识运用到实际工作中，提高了生作效率 得到了领导和同事的认 可。 五、不断反思，追求进步 我深知自身仍有不足，因此在学习过程中不断反思，总结经验教训，力求在 今后的工作和学习中取得更好的成绩。 总结：通过成人大专学习，我不仅提高专业素养，还培养了良好的学习习惯 和国大榜卡精神，为今后的职业生涯奠定了坚实基础。 签名： 2025 年 6 月 28 日 班 主 任 意 见 签名： 2025 年 6月 29 日 学 院 意 见 经审查成绩合格准予毕业 公 章 2025 年 7月 1日 本表一式两份，一份学校存档，一份放入毕业生档案。 "}; responseBody: data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "{\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "  ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": " \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "module\": \"个人信息", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "管理\",\n  \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "function\": \"学生", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "基本信息登记\",\n ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": " \"demand_point\":", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": " \"记录学生的姓名", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "、性别、出生", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "日期、学号", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "、入学年月", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "和毕业年月", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "\",\n  \"core", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "_concepts\": \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "姓名, 性", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "别, 出", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "生日期,", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": " 学号,", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": " 入学年月", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": ", 毕", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "业年月\"\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "}\n{\n   \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "module\": \"个人信息", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "管理\",\n  \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "function\": \"专业", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "与层次信息登记", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "\",\n  \"demand", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "_point\": \"记录", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "学生所学专业", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "名称、学习层次", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "及学习形式\",\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "  \"core_con", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "cepts\": \"专业", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "名称, 学", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "习层次,", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": " 学习形式\"\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "}\n{\n   \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "module\": \"自我", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "鉴定管理\",\n ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": " \"function\": \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "学习态度描述\",\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "  \"demand_point", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "\": \"描述学生", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "在学习过程中保持", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "端正的学习态度并", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "明确目标\",\n ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": " \"core_concepts", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "\": \"学习态度", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": ", 目标", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "明确\"\n}\n{\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "   \"module\":", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": " \"自我鉴定管理", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "\",\n  \"function", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "\": \"勤奋刻苦", "from_variable_selector": null}
+
+event: ping
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "表现\",\n  \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "demand_point\": \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "记录学生克服工作", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "与生活压力，", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "合理安排时间完成", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "学习任务\",\n ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": " \"core_concepts", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "\": \"勤奋刻苦", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": ", 时间管理\"\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "}\n{\n   \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "module\": \"自我", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "鉴定管理\",\n ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": " \"function\": \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "团队协作能力\",\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "  \"demand_point", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "\": \"描述学生", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "积极参与班级活动并与", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "同学互相学习交流", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "\",\n  \"core", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "_concepts\": \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "团队协作, ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "互相学习\"\n}\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "{\n   \"module", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "\": \"自我鉴定", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "管理\",\n  \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "function\": \"助", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "人精神体现\",\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "  \"demand_point", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "\": \"记录学生", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "乐于帮助他人", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "并获得同学信任", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "\",\n  \"core", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "_concepts\": \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "乐于助人", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": ", 同学", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "信任\"\n}\n{\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "   \"module\":", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": " \"自我鉴定管理", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "\",\n  \"function", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "\": \"实践能力", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "评估\",\n  \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "demand_point\": \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "评价学生将所", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "学知识运用到", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "实际工作中并提高", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "工作效率\",\n  \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "core_concepts\":", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": " \"实践能力,", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": " 工作效率", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "\"\n}\n{\n  ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": " \"module\": \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "自我鉴定管理\",\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "  \"function\":", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": " \"反思与进步", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "\",\n  \"demand", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "_point\": \"记录", "from_variable_selector": null}
+
+event: ping
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "学生不断反思自身", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "不足并追求进步", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "\",\n  \"core", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "_concepts\": \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "反思, 追", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "求进步\"\n}\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "{\n   \"module", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "\": \"总结管理", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "\",\n  \"function", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "\": \"学习成果", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "总结\",\n  \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "demand_point\": \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "总结学生通过成", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "人大专学习提升", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "专业素养和培养", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "良好学习习惯\",\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "  \"core_con", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "cepts\": \"学习", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "成果, 专业", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "素养, 学", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "习习惯\"\n}\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "{\n   \"module", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "\": \"班主任意见", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "管理\",\n  \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "function\": \"班主任", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "意见记录\",\n ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": " \"demand_point\":", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": " \"记录班主任对学生", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "的表现或学习情况", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "的意见\",\n  \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "core_concepts\":", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": " \"班主任意见\"\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "}\n{\n   \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "module\": \"学院", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "意见管理\",\n ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": " \"function\": \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "学院毕业审核\",\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "  \"demand_point", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "\": \"记录学院", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "对学生毕业资格的", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "审查结果\",\n ", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": " \"core_concepts", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "\": \"毕业审核", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": ", 审查", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "结果\"\n}\n{\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "   \"module\":", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": " \"档案管理\",\n", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "  \"function\":", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": " \"毕业生档案生成", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "\",\n  \"demand", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "_point\": \"说明", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "毕业生登记表的", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "用途和存档", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "方式\",\n  \"", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "core_concepts\":", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": " \"毕业生档案,", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": " 表格存", "from_variable_selector": null}
+
+data: {"event": "message", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "answer": "档\"\n}", "from_variable_selector": null}
+
+data: {"event": "message_end", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "id": "d0ac4788-295f-402b-9762-08ee2bb57770", "metadata": {"usage": {"prompt_tokens": 687, "prompt_unit_price": "0.0008", "prompt_price_unit": "0.001", "prompt_price": "0.0005496", "completion_tokens": 666, "completion_unit_price": "0.002", "completion_price_unit": "0.001", "completion_price": "0.0013320", "total_tokens": 1353, "total_price": "0.0018816", "currency": "RMB", "latency": 28.56068896036595}}}
+
+data: {"event": "tts_message_end", "conversation_id": "951d8288-833e-41bf-9855-51abfaac8a12", "message_id": "d0ac4788-295f-402b-9762-08ee2bb57770", "created_at": 1750257728, "task_id": "f09543d0-23d7-44bb-ad41-3f888949b5ed", "audio": ""}
+
+ 
+com.alibaba.fastjson2.JSONException: input not end, offset 154, character {, line 7, column 2, fastjson-version 2.0.53
+{
+   "module": "个人信息管理",
+  "function": "学生基本信息登记",
+  "demand_point": "记录学生的姓名、性别、出生日期、学号、入学年月和毕业年月",
+  "core_concepts": "姓名, 性别, 出生日期, 学号, 入学年月, 毕业年月"
+}
+{
+   "module": "个人信息管理",
+  "function": "专业与层次信息登记",
+  "demand_point": "记录学生所学专业名称、学习层次及学习形式",
+  "core_concepts": "专业名称, 学习层次, 学习形式"
+}
+{
+   "module": "自我鉴定管理",
+  "function": "学习态度描述",
+  "demand_point": "描述学生在学习过程中保持端正的学习态度并明确目标",
+  "core_concepts": "学习态度, 目标明确"
+}
+{
+   "module": "自我鉴定管理",
+  "function": "勤奋刻苦表现",
+  "demand_point": "记录学生克服工作与生活压力，合理安排时间完成学习任务",
+  "core_concepts": "勤奋刻苦, 时间管理"
+}
+{
+   "module": "自我鉴定管理",
+  "function": "团队协作能力",
+  "demand_point": "描述学生积极参与班级活动并与同学互相学习交流",
+  "core_concepts": "团队协作, 互相学习"
+}
+{
+   "module": "自我鉴定管理",
+  "function": "助人精神体现",
+  "demand_point": "记录学生乐于帮助他人并获得同学信任",
+  "core_concepts": "乐于助人, 同学信任"
+}
+{
+   "module": "自我鉴定管理",
+  "function": "实践能力评估",
+  "demand_point": "评价学生将所学知识运用到实际工作中并提高工作效率",
+  "core_concepts": "实践能力, 工作效率"
+}
+{
+   "module": "自我鉴定管理",
+  "function": "反思与进步",
+  "demand_point": "记录学生不断反思自身不足并追求进步",
+  "core_concepts": "反思, 追求进步"
+}
+{
+   "module": "总结管理",
+  "function": "学习成果总结",
+  "demand_point": "总结学生通过成人大专学习提升专业素养和培养良好学习习惯",
+  "core_concepts": "学习成果, 专业素养, 学习习惯"
+}
+{
+   "module": "班主任意见管理",
+  "function": "班主任意见记录",
+  "demand_point": "记录班主任对学生的表现或学习情况的意见",
+  "core_concepts": "班主任意见"
+}
+{
+   "module": "学院意见管理",
+  "function": "学院毕业审核",
+  "demand_point": "记录学院对学生毕业资格的审查结果",
+  "core_concepts": "毕业审核, 审查结果"
+}
+{
+   "module": "档案管理",
+  "function": "毕业生档案生成",
+  "demand_point": "说明毕业生登记表的用途和存档方式",
+  "core_concepts": "毕业生档案, 表格存档"
+}
+	at com.alibaba.fastjson2.JSON.parseObject(JSON.java:869)
+	at com.alibaba.fastjson2.JSONObject.parseObject(JSONObject.java:2107)
+	at com.ruoyi.common.utils.dify.DifyUtil.get_value(DifyUtil.java:57)
+	at com.ruoyi.system.testers.impl.CaseSaveServiceImpl.get_function_matrix(CaseSaveServiceImpl.java:60)
+	at com.ruoyi.web.controller.testers.CaseSaveController.importData(CaseSaveController.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:903)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:809)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:114)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at com.ruoyi.common.filter.RepeatableFilter.doFilter(RepeatableFilter.java:43)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:96)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at com.ruoyi.framework.security.filter.JwtAuthenticationTokenFilter.doFilterInternal(JwtAuthenticationTokenFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:935)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1792)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.lang.Thread.run(Thread.java:750)
+22:42:37.218 [http-nio-8080-exec-29] ERROR c.r.f.w.e.GlobalExceptionHandler - [handleRuntimeException,100] - 请求地址'/testers/case/save/query-function-matrix',发生未知异常.
+java.lang.RuntimeException: dify value serializable error 响应解析失败
+	at com.ruoyi.common.utils.dify.DifyUtil.get_value(DifyUtil.java:62)
+	at com.ruoyi.system.testers.impl.CaseSaveServiceImpl.get_function_matrix(CaseSaveServiceImpl.java:60)
+	at com.ruoyi.web.controller.testers.CaseSaveController.importData(CaseSaveController.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:903)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:809)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:114)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at com.ruoyi.common.filter.RepeatableFilter.doFilter(RepeatableFilter.java:43)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:96)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at com.ruoyi.framework.security.filter.JwtAuthenticationTokenFilter.doFilterInternal(JwtAuthenticationTokenFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:935)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1792)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: com.alibaba.fastjson2.JSONException: input not end, offset 154, character {, line 7, column 2, fastjson-version 2.0.53
+{
+   "module": "个人信息管理",
+  "function": "学生基本信息登记",
+  "demand_point": "记录学生的姓名、性别、出生日期、学号、入学年月和毕业年月",
+  "core_concepts": "姓名, 性别, 出生日期, 学号, 入学年月, 毕业年月"
+}
+{
+   "module": "个人信息管理",
+  "function": "专业与层次信息登记",
+  "demand_point": "记录学生所学专业名称、学习层次及学习形式",
+  "core_concepts": "专业名称, 学习层次, 学习形式"
+}
+{
+   "module": "自我鉴定管理",
+  "function": "学习态度描述",
+  "demand_point": "描述学生在学习过程中保持端正的学习态度并明确目标",
+  "core_concepts": "学习态度, 目标明确"
+}
+{
+   "module": "自我鉴定管理",
+  "function": "勤奋刻苦表现",
+  "demand_point": "记录学生克服工作与生活压力，合理安排时间完成学习任务",
+  "core_concepts": "勤奋刻苦, 时间管理"
+}
+{
+   "module": "自我鉴定管理",
+  "function": "团队协作能力",
+  "demand_point": "描述学生积极参与班级活动并与同学互相学习交流",
+  "core_concepts": "团队协作, 互相学习"
+}
+{
+   "module": "自我鉴定管理",
+  "function": "助人精神体现",
+  "demand_point": "记录学生乐于帮助他人并获得同学信任",
+  "core_concepts": "乐于助人, 同学信任"
+}
+{
+   "module": "自我鉴定管理",
+  "function": "实践能力评估",
+  "demand_point": "评价学生将所学知识运用到实际工作中并提高工作效率",
+  "core_concepts": "实践能力, 工作效率"
+}
+{
+   "module": "自我鉴定管理",
+  "function": "反思与进步",
+  "demand_point": "记录学生不断反思自身不足并追求进步",
+  "core_concepts": "反思, 追求进步"
+}
+{
+   "module": "总结管理",
+  "function": "学习成果总结",
+  "demand_point": "总结学生通过成人大专学习提升专业素养和培养良好学习习惯",
+  "core_concepts": "学习成果, 专业素养, 学习习惯"
+}
+{
+   "module": "班主任意见管理",
+  "function": "班主任意见记录",
+  "demand_point": "记录班主任对学生的表现或学习情况的意见",
+  "core_concepts": "班主任意见"
+}
+{
+   "module": "学院意见管理",
+  "function": "学院毕业审核",
+  "demand_point": "记录学院对学生毕业资格的审查结果",
+  "core_concepts": "毕业审核, 审查结果"
+}
+{
+   "module": "档案管理",
+  "function": "毕业生档案生成",
+  "demand_point": "说明毕业生登记表的用途和存档方式",
+  "core_concepts": "毕业生档案, 表格存档"
+}
+	at com.alibaba.fastjson2.JSON.parseObject(JSON.java:869)
+	at com.alibaba.fastjson2.JSONObject.parseObject(JSONObject.java:2107)
+	at com.ruoyi.common.utils.dify.DifyUtil.get_value(DifyUtil.java:57)
+	... 109 common frames omitted

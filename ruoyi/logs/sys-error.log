@@ -1,0 +1,192 @@
+19:36:49.402 [http-nio-8080-exec-3] ERROR c.r.c.u.d.DifyUtil - [save_case,94] - 生成对应的功能矩阵-case_code_list:["104ce946-60d2-402c-831f-b6c373e13d06"]
+19:40:03.496 [difyExecutor-1] ERROR c.r.c.u.CompletableFutureUtil - [lambda$asyncProcess$4,69] - asyncProcess supply exception
+java.util.concurrent.CompletionException: com.alibaba.fastjson2.JSONException: illegal fieldName input<, offset 2315, character <, line 59, column 60, fastjson-version 2.0.53
+[
+    {
+        "module": "家长沟通流程（寒雪家访）",
+        "functionDesc": "信息收集环节",
+        "demandPoint": "用户与AI对话日志按角色打上身份标签并拼接",
+        "coreConcepts": "对话日志, 身份标签, 数据拼接",
+        "caseNumber": "HC-001",
+        "title": "验证信息收集环节中对话日志正确添加身份标签并拼接",
+        "precondition": "系统已启动，进入家长沟通流程；用户和AI已完成一轮或多轮对话。",
+        "testSteps": "1. 获取用户与AI的对话日志；2. 检查每条日志是否正确添加了身份标签；3. 验证所有日志是否按顺序拼接为完整对话。",
+        "testData": "正常对话日志：parent:我们开始吧 teacher:西西家长，接下来我会问您一些关于孩子基础学情的问题...",
+        "expectedResult": "步骤2：每条日志均正确添加了身份标签（如parent:、teacher:）。步骤3：所有日志按顺序拼接为完整对话。",
+        "actualResult": "",
+        "priority": "P0",
+        "caseType": "功能测试",
+        "tags": "正常场景"
+    },
+    {
+        "module": "家长沟通流程（寒雪家访）",
+        "functionDesc": "信息收集环节",
+        "demandPoint": "用户与AI对话日志按角色打上身份标签并拼接",
+        "coreConcepts": "对话日志, 身份标签, 数据拼接",
+        "caseNumber": "HC-002",
+        "title": "验证信息收集环节中空对话日志的处理逻辑",
+        "precondition": "系统已启动，进入家长沟通流程；未产生任何有效对话。",
+        "testSteps": "1. 模拟生成一条空对话日志；2. 检查日志是否被正确标记为空或未记录；3. 验证最终输出是否为空或提示无数据。",
+        "testData": "空对话日志：无输入或仅包含空白字符。",
+        "expectedResult": "步骤2：空日志未被记录或正确标记为空。步骤3：最终输出为空或提示无数据。",
+        "actualResult": "",
+        "priority": "P1",
+        "caseType": "异常测试",
+        "tags": "异常场景"
+    },
+    {
+        "module": "家长沟通流程（寒雪家访）",
+        "functionDesc": "信息收集环节",
+        "demandPoint": "用户与AI对话日志按角色打上身份标签并拼接",
+        "coreConcepts": "对话日志, 身份标签, 数据拼接",
+        "caseNumber": "HC-003",
+        "title": "验证信息收集环节中过长对话日志的截断逻辑",
+        "precondition": "系统已启动，进入家长沟通流程；模拟生成一条超过系统限制长度的对话日志。",
+        "testSteps": "1. 输入一条超长对话内容；2. 检查系统是否对超出部分进行截断；3. 验证最终输出是否符合长度限制。",
+        "testData": "超长对话日志：parent:这是一段非常长的文本，超过了系统设定的最大长度限制...",
+        "expectedResult": "步骤2：系统对超出部分进行了截断。步骤3：最终输出符合长度限制。",
+        "actualResult": "",
+        "priority": "P1",
+        "caseType": "边界测试",
+        "tags": "边界场景"
+    },
+    {
+        "module": "家长沟通流程（寒雪家访）",
+        "functionDesc": "信息收集环节",
+        "demandPoint": "用户与AI对话日志按角色打上身份标签并拼接",
+        "coreConcepts": "对话日志, 身份标签, 数据拼接",
+        "caseNumber": "HC-004",
+        "title": "验证信息收集环节中特殊字符的兼容性",
+        "precondition": "系统已启动，进入家长沟通流程；模拟生成包含特殊字符的对话日志。",
+        "testSteps": "1. 输入包含特殊字符的对话内容；2. 检查系统是否正确解析并记录日志；3. 验证最终输出是否保留特殊字符且格式正确。",
+        "testData": "特殊字符对话日志：parent:测试!@#$%^&*()_+{}|:\\"<>?`~",
+        "expectedResult": "步骤2：系统正确解析并记录日志。步骤3：最终输出保留特殊字符且格式正确。",
+        "actualResult": "",
+        "priority": "P1",
+        "caseType": "兼容性测试",
+        "tags": "兼容性"
+    },
+    {
+        "module": "家长沟通流程（寒雪家访）",
+        "functionDesc": "信息收集环节",
+        "demandPoint": "用户与AI对话日志按角色打上身份标签并拼接",
+        "coreConcepts": "对话日志, 身份标签, 数据拼接",
+        "caseNumber": "HC-005",
+        "title": "验证信息收集环节中多轮对话日志的连续性",
+        "precondition": "系统已启动，进入家长沟通流程；完成多轮对话并生成多条日志。",
+        "testSteps": "1. 获取多轮对话生成的所有日志；2. 检查每条日志是否按时间顺序排列；3. 验证最终输出是否保持对话连续性。",
+        "testData": "多轮对话日志：parent:我们开始吧 teacher:好的，请回答问题... parent:继续 teacher:接下来的问题是...",
+        "expectedResult": "步骤2：日志按时间顺序排列。步骤3：最终输出保持对话连续性。",
+        "actualResult": "",
+        "priority": "P0",
+        "caseType": "功能测试",
+        "tags": "正常场景"
+    }
+]
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run$$$capture(CompletableFuture.java:1606)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: com.alibaba.fastjson2.JSONException: illegal fieldName input<, offset 2315, character <, line 59, column 60, fastjson-version 2.0.53
+[
+    {
+        "module": "家长沟通流程（寒雪家访）",
+        "functionDesc": "信息收集环节",
+        "demandPoint": "用户与AI对话日志按角色打上身份标签并拼接",
+        "coreConcepts": "对话日志, 身份标签, 数据拼接",
+        "caseNumber": "HC-001",
+        "title": "验证信息收集环节中对话日志正确添加身份标签并拼接",
+        "precondition": "系统已启动，进入家长沟通流程；用户和AI已完成一轮或多轮对话。",
+        "testSteps": "1. 获取用户与AI的对话日志；2. 检查每条日志是否正确添加了身份标签；3. 验证所有日志是否按顺序拼接为完整对话。",
+        "testData": "正常对话日志：parent:我们开始吧 teacher:西西家长，接下来我会问您一些关于孩子基础学情的问题...",
+        "expectedResult": "步骤2：每条日志均正确添加了身份标签（如parent:、teacher:）。步骤3：所有日志按顺序拼接为完整对话。",
+        "actualResult": "",
+        "priority": "P0",
+        "caseType": "功能测试",
+        "tags": "正常场景"
+    },
+    {
+        "module": "家长沟通流程（寒雪家访）",
+        "functionDesc": "信息收集环节",
+        "demandPoint": "用户与AI对话日志按角色打上身份标签并拼接",
+        "coreConcepts": "对话日志, 身份标签, 数据拼接",
+        "caseNumber": "HC-002",
+        "title": "验证信息收集环节中空对话日志的处理逻辑",
+        "precondition": "系统已启动，进入家长沟通流程；未产生任何有效对话。",
+        "testSteps": "1. 模拟生成一条空对话日志；2. 检查日志是否被正确标记为空或未记录；3. 验证最终输出是否为空或提示无数据。",
+        "testData": "空对话日志：无输入或仅包含空白字符。",
+        "expectedResult": "步骤2：空日志未被记录或正确标记为空。步骤3：最终输出为空或提示无数据。",
+        "actualResult": "",
+        "priority": "P1",
+        "caseType": "异常测试",
+        "tags": "异常场景"
+    },
+    {
+        "module": "家长沟通流程（寒雪家访）",
+        "functionDesc": "信息收集环节",
+        "demandPoint": "用户与AI对话日志按角色打上身份标签并拼接",
+        "coreConcepts": "对话日志, 身份标签, 数据拼接",
+        "caseNumber": "HC-003",
+        "title": "验证信息收集环节中过长对话日志的截断逻辑",
+        "precondition": "系统已启动，进入家长沟通流程；模拟生成一条超过系统限制长度的对话日志。",
+        "testSteps": "1. 输入一条超长对话内容；2. 检查系统是否对超出部分进行截断；3. 验证最终输出是否符合长度限制。",
+        "testData": "超长对话日志：parent:这是一段非常长的文本，超过了系统设定的最大长度限制...",
+        "expectedResult": "步骤2：系统对超出部分进行了截断。步骤3：最终输出符合长度限制。",
+        "actualResult": "",
+        "priority": "P1",
+        "caseType": "边界测试",
+        "tags": "边界场景"
+    },
+    {
+        "module": "家长沟通流程（寒雪家访）",
+        "functionDesc": "信息收集环节",
+        "demandPoint": "用户与AI对话日志按角色打上身份标签并拼接",
+        "coreConcepts": "对话日志, 身份标签, 数据拼接",
+        "caseNumber": "HC-004",
+        "title": "验证信息收集环节中特殊字符的兼容性",
+        "precondition": "系统已启动，进入家长沟通流程；模拟生成包含特殊字符的对话日志。",
+        "testSteps": "1. 输入包含特殊字符的对话内容；2. 检查系统是否正确解析并记录日志；3. 验证最终输出是否保留特殊字符且格式正确。",
+        "testData": "特殊字符对话日志：parent:测试!@#$%^&*()_+{}|:\\"<>?`~",
+        "expectedResult": "步骤2：系统正确解析并记录日志。步骤3：最终输出保留特殊字符且格式正确。",
+        "actualResult": "",
+        "priority": "P1",
+        "caseType": "兼容性测试",
+        "tags": "兼容性"
+    },
+    {
+        "module": "家长沟通流程（寒雪家访）",
+        "functionDesc": "信息收集环节",
+        "demandPoint": "用户与AI对话日志按角色打上身份标签并拼接",
+        "coreConcepts": "对话日志, 身份标签, 数据拼接",
+        "caseNumber": "HC-005",
+        "title": "验证信息收集环节中多轮对话日志的连续性",
+        "precondition": "系统已启动，进入家长沟通流程；完成多轮对话并生成多条日志。",
+        "testSteps": "1. 获取多轮对话生成的所有日志；2. 检查每条日志是否按时间顺序排列；3. 验证最终输出是否保持对话连续性。",
+        "testData": "多轮对话日志：parent:我们开始吧 teacher:好的，请回答问题... parent:继续 teacher:接下来的问题是...",
+        "expectedResult": "步骤2：日志按时间顺序排列。步骤3：最终输出保持对话连续性。",
+        "actualResult": "",
+        "priority": "P0",
+        "caseType": "功能测试",
+        "tags": "正常场景"
+    }
+]
+	at com.alibaba.fastjson2.JSONReaderUTF16.readFieldNameHashCode(JSONReaderUTF16.java:1130)
+	at com.alibaba.fastjson2.reader.ORG_5_14_TestCase.readObject(Unknown Source)
+	at com.alibaba.fastjson2.JSONReader.readArray(JSONReader.java:2410)
+	at com.alibaba.fastjson2.JSON.parseArray(JSON.java:2767)
+	at com.alibaba.fastjson2.JSONArray.parseArray(JSONArray.java:1532)
+	at com.ruoyi.system.domain.testers.case_save.dify_input.Test_case_save_dify_input.get_dify_value(Test_case_save_dify_input.java:30)
+	at com.ruoyi.system.testers.impl.CaseSaveServiceImpl.lambda$save_case$0(CaseSaveServiceImpl.java:104)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at com.ruoyi.common.utils.CompletableFutureUtil.lambda$asyncProcess$3(CompletableFutureUtil.java:67)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run$$$capture(CompletableFuture.java:1604)
+	... 4 common frames omitted
