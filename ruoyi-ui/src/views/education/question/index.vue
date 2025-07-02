@@ -1,169 +1,144 @@
 <template>
   <div class="app-container">
-    <el-row :gutter="10">
-      <el-col :span="24" class="card-box">
-        <el-card>
-          <div slot="header"><span><i class="el-icon-monitor"></i> PRD 上传</span></div>
-          <div class="el-table el-table--enable-row-hover el-table--medium">
-            <table cellspacing="0" style="width: 100%">
-              <tbody>
-              <tr>
-                <td class="el-table__cell is-leaf">
-                  <div class="cell">
-                    <el-col :span="1.5">
-                      <el-button
-                        type="info"
-                        plain
-                        icon="el-icon-upload2"
-                        size="mini"
-                        @click="handleImport"
-                        v-hasPermi="['testers:case:import']"
-                      >PRD 导入</el-button>
-                    </el-col>
-                  </div>
-                </td>
-              </tr>
-              <!-- 每条导入结果一行，并带有PRD预览按钮 -->
-              <tr v-for="(result, idx) in importResults" :key="idx">
-                <td class="el-table__cell is-leaf">
-                  <div class="cell" style="display: flex; align-items: center;">
-                    <el-button type="primary" plain size="mini" style="margin-right: 10px;">PRD 预览</el-button>
-                    <div v-html="result" style="flex: 1;"></div>
-                  </div>
-                </td>
-              </tr>
-              </tbody>
-            </table>
+    <el-card>
+      <div slot="header">题目解析</div>
+      <el-form :model="form" ref="form" label-width="100px" style="max-width: 600px;">
+
+        <el-form-item label="题目图片">
+          <el-upload
+            :action="uploadUrl"
+            :data="{ folder: 'aaa' }"
+            :on-success="handleImageUploadSuccess"
+            :on-error="handleImageUploadError"
+            :before-upload="handleImageUploadStart"
+            :show-file-list="false"
+          >
+            <el-button type="primary">上传图片</el-button>
+          </el-upload>
+          <div v-if="form.image" style="margin-top: 10px;">
+            <el-image :src="imageBaseUrl + form.image" style="max-width: 200px;" />
           </div>
-        </el-card>
-      </el-col>
-    </el-row>
-
-
+        </el-form-item>
+        <el-form-item>
+          <el-button
+            type="success"
+            icon="el-icon-check"
+            style="min-width: 120px;"
+            @click="saveQuestion"
+          >保存题目</el-button>
+        </el-form-item>
+      </el-form>
+    </el-card>
+    <el-card style="margin-top: 30px;">
+      <div slot="header">题目列表</div>
+      <el-table :data="questionList" style="width: 100%">
+        <el-table-column label="题目内容" min-width="200">
+          <template slot-scope="scope">
+            <div style="white-space: pre-wrap; word-break: break-all; max-width: 500px;">
+              {{ scope.row.content }}
+            </div>
+          </template>
+        </el-table-column>
+        <el-table-column prop="option" label="选项内容" />
+        <el-table-column prop="difficulty" label="难度" />
+        <el-table-column prop="answer" label="答案" />
+        <el-table-column prop="type" label="题目类型" />
+        <el-table-column prop="subject" label="学科" />
+        <el-table-column prop="isQuestionImage" label="是否有图片">
+          <template slot-scope="scope">
+            <span v-if="scope.row.isQuestionImage == 1">有</span>
+            <span v-else>无</span>
+          </template>
+        </el-table-column>
+        <el-table-column prop="image" label="图片" width="120">
+          <template slot-scope="scope">
+            <el-image v-if="scope.row.image" :src="imageBaseUrl + scope.row.image" style="max-width: 80px;" />
+          </template>
+        </el-table-column>
+      </el-table>
+    </el-card>
   </div>
 </template>
 
 <script>
-import { getToken } from "@/utils/auth"
-import request from '@/utils/request'
+import axios from 'axios'
+import {getToken} from "@/utils/auth";
 
 export default {
   data() {
     return {
-      importResults: [],
-      upload: {
-        open: false,
-        title: "",
-        isUploading: false,
-        url: "http://test.91jzx.cn/jzx-server/eve/rest/file/operate/upload"
+      form: {
+        content: '',
+        option: '',
+        difficulty: 1,
+        answer: '',
+        type: '',
+        subject: '',
+        isQuestionImage: 2,
+        image: ''
       },
-      previewVisible: false,
-      previewUrl: "",
-      previewFile: null,
-      functionMatrix: [],
-      testCases: []
+      questionList: [],
+      uploadUrl: 'http://test.91jzx.cn/jzx-server/eve/rest/file/operate/upload',
+      imageBaseUrl: 'http://oss-image.91jzx.cn/aaa/', // 假设图片预览前缀
+      uploadLoadingMessage: null
     }
   },
   methods: {
-    handleImport() {
-      this.upload.title = "导入"
-      this.upload.open = true
+    handleImageUploadStart() {
+      this.uploadLoadingMessage = this.$message({
+        type: 'info',
+        message: '正在上传图片，请稍候...',
+        duration: 0
+      });
     },
-    submitFileForm() {
-      this.$refs.upload.submit()
-    },
-    handleFileUploadProgress(event, file, fileList) {
-      this.upload.isUploading = true
-    },
-    handleFileSuccess(response, file, fileList) {
-      this.upload.open = false
-      this.upload.isUploading = false
-      this.$refs.upload.clearFiles()
-      this.importResults.push(response.msg)
-      this.$alert(
-        "<div style='overflow: auto;overflow-x: hidden;max-height: 70vh;padding: 10px 20px 0;'>" +
-        response.msg +
-        "</div>",
-        "导入结果",
-        { dangerouslyUseHTMLString: true }
-      )
-    },
-    handleFileChange(file, fileList) {
-      if (file && file.raw) {
-        this.previewFile = file.raw
+    handleImageUploadSuccess(response) {
+      if (this.uploadLoadingMessage) {
+        this.uploadLoadingMessage.close();
+        this.uploadLoadingMessage = null;
+      }
+      if (response.code === '00000' && response.data && response.data[0]) {
+        this.form.image = response.data[0].fileName
+        this.form.isQuestionImage = 1
+        this.$message.success('图片上传成功')
       } else {
-        this.previewFile = null
+        this.$message.error('图片上传失败')
       }
     },
-    handlePreview() {
-      if (this.previewFile) {
-        this.previewUrl = URL.createObjectURL(this.previewFile)
-        this.previewVisible = true
+    handleImageUploadError() {
+      if (this.uploadLoadingMessage) {
+        this.uploadLoadingMessage.close();
+        this.uploadLoadingMessage = null;
       }
+      this.$message.error('图片上传失败')
     },
-    generateFunctionMatrix() {
-      const file_name_list = this.importResults;
+    saveQuestion() {
+      const imageUrl = this.form.image ? this.imageBaseUrl + this.form.image : '';
       const loadingMessage = this.$message({
         type: 'info',
-        message: '正在生成功能矩阵，请稍候...',
-        duration: 0,
-        onClose: () => {
-          console.log('loading 提示已手动关闭');
-        }
+        message: '正在保存题目，请稍候...',
+        duration: 0
       });
-      request({
-        url: '/testers/case/save/query-function-matrix',
-        method: 'post',
-        data: { file_name_list }
-      }).then(response => {
-        if (response.code === 200) {
-          this.functionMatrix = response.data;
-          this.$message.success('功能矩阵生成成功');
+      axios.post(
+        '/dev-api/question/question_restore',
+        {
+          image_url_question_list: imageUrl ? [imageUrl] : []
+        },
+        {
+          headers: { Authorization: 'Bearer ' + getToken() }
+        }
+      ).then(res => {
+        if (res.data.code === 200) {
+          this.$message.success('题目保存成功')
+          if (Array.isArray(res.data.data)) {
+            // 用id去重，假设题目有id字段
+            this.questionList = res.data.data;
+          }
+          // 不清空表单内容
         } else {
-          this.$message.error(response.msg || '生成失败');
+          this.$message.error(res.data.msg || '题目保存失败')
         }
       }).catch(error => {
-        this.$message.error('生成功能矩阵失败：' + error);
-      }).finally(() => {
-        loadingMessage.close();
-      });
-    },
-    generateTestCases() {
-      // 从功能矩阵数据中提取所有 caseSaveCode，去重
-      const case_code_set = new Set();
-      this.functionMatrix.forEach(item => {
-        if (item.caseSaveCode) {
-          case_code_set.add(item.caseSaveCode);
-        }
-      });
-      const case_code_list = Array.from(case_code_set);
-
-      if (case_code_list.length === 0) {
-        this.$message.warning('没有可用的用例编码，无法生成测试用例');
-        return;
-      }
-
-      const loadingMessage = this.$message({
-        type: 'info',
-        message: '正在生成测试用例，请稍候...',
-        duration: 0,
-        onClose: () => {
-          console.log('loading 提示已手动关闭');
-        }
-      });
-      request({
-        url: '/testers/case/save/save-case',
-        method: 'post',
-        data: { case_code_list }
-      }).then(response => {
-        if (response.code === 200) {
-          this.testCases = response.data;
-          this.$message.success('测试用例生成成功');
-        } else {
-          this.$message.error(response.msg || '生成失败');
-        }
-      }).catch(error => {
-        this.$message.error('生成测试用例失败：' + error);
+        this.$message.error('保存题目失败：' + error)
       }).finally(() => {
         loadingMessage.close();
       });
